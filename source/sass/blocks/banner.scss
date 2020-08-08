@@ -1,0 +1,91 @@
+.main-banner {
+  position: relative;
+  padding-top: 300px;
+  background-image: url('../img/bg/star-first-screen.png');
+  background-size: cover;
+  background-position: -25px 8%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    background-image: url('../img/content/flare-first-screen.png');
+    background-repeat: no-repeat;
+    opacity: 0.2;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__title {
+    max-width: 755px;
+    width: 100%;
+    margin: 0 0 75px;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  &__descr {
+    max-width: 830px;
+    width: 100%;
+    margin: 0 0 85px;
+    font-size: 28px;
+    line-height: 45px;
+    opacity: 0.7;
+  }
+
+  &__bottom-text {
+    margin: 0 0 35px;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  &__button {
+    @include button;
+  }
+
+  &__big-planet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+
+    .small-planet {
+      position: absolute;
+      top: 145px;
+      left: -100px;
+      z-index: 2;
+    }
+
+    .rocket {
+      position: absolute;
+      top: 275px;
+      right: 270px;
+      z-index: 2;
+    }
+
+    .big-planet {
+      position: absolute;
+      top: 183px;
+      right: 0;
+      z-index: 2;
+    }
+
+    .big-planet-light {
+      position: absolute;
+      z-index: 1;
+      top: 70px;
+      right: 150px;
+    }
+  }
+}
