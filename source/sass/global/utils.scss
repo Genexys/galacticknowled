@@ -26,6 +26,9 @@ input[type="radio"].visually-hidden {
   min-height: 100vh;
   overflow-x: hidden;
 
+  background-color: #220d29;
+  background: linear-gradient(to bottom, rgba(26,9,36,1) 0%, rgba(86,24,119,1) 55%);
+
   .header,
   .footer {
     flex-shrink: 0;

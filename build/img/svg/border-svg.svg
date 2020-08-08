@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="65" viewBox="0 0 250 65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-linejoin: round;
+        stroke-opacity: 0.5;
+        stroke-width: 2px;
+        stroke: url(#linear-gradient);
+        filter: url(#filter);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="135.71" y1="54" x2="113.29" y2="10" gradientUnits="userSpaceOnUse">
+      <stop offset="0.015" stop-color="#4e40de"/>
+      <stop offset="0.985" stop-color="#ff00f0"/>
+    </linearGradient>
+    <filter id="filter" x="-1" y="-1" width="252" height="67" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="3.333" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-color="#82238e" flood-opacity="0.14"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: none; filter: url(#filter)">
+    <rect id="Прямоугольник_скругл._углы_1" data-name="Прямоугольник, скругл. углы 1" class="cls-1" x="10" y="10" width="229" height="44" rx="22" ry="22" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#Прямоугольник_скругл._углы_1" style="stroke: url(#linear-gradient); filter: none; fill: none"/>
+</svg>
