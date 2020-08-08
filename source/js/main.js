@@ -1,6 +1,7 @@
 import {forEachPolyfill} from './utils/polyfill-foreach';
 import {initIe11Download} from './utils/init-ie11-download';
-import {test} from './modules/test';
+import {fixHeader} from "./modules/fixHeader";
+import {animateBtn} from "./modules/animateBtn";
 
 // Utils
 // ---------------------------------
@@ -10,4 +11,5 @@ initIe11Download();
 
 // Modules
 // ---------------------------------
-test();
+fixHeader();
+animateBtn();

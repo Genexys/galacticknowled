@@ -32,6 +32,15 @@
 
   <div style="display: none;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-heart"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.431 4.642a5.605 5.605 0 017.927 7.927l-1.441 1.441-7.907 7.927-7.927-7.927-1.441-1.441a5.605 5.605 0 017.927-7.927l1.441 1.441 1.421-1.441z" fill="#111"></path></symbol></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
+          <feComposite in="SourceGraphic" in2="goo"></feComposite>
+        </filter>
+      </defs>
+    </svg>
   </div>
 
   <div class="wrapper">
@@ -81,8 +90,20 @@
         Узнай о курсах от преподавателя
       </p>
 
-      <button type="button" class="main-banner__button">
-        <span>Хочу узнать!</span>
+      <button type="button" class="animate-btn main-banner__button">
+        <span class="animate-btn__text">Хочу узнать!</span>
+        <span class="animate-btn__effect-container">
+      <span class="circle top-left"></span>
+      <span class="circle top-left"></span>
+      <span class="circle top-left"></span>
+
+      <span class="button effect-button"></span>
+
+      <span class="circle bottom-right"></span>
+      <span class="circle bottom-right"></span>
+      <span class="circle bottom-right"></span>
+</span>
+
       </button>
     </div>
   </div>
@@ -95,12 +116,155 @@
   </div>
 </div>
 
+      <section class="courses">
+  <div class="container">
+    <h2 class="courses__title">Наши космические курсы</h2>
+
+    <ul class="courses__list">
+      <li class="courses__item">
+        <div class="course-card course-card--one">
+          <div class="course-card__wrapper">
+            <article class="course-card__content">
+              <header class="course-card__header">
+                <h1 class="course-card__title">Математика - с нуля и в <span>космос</span>!</h1>
+              </header>
+              <main class="course-card__main">
+                <p>Полная программа <br> подготовки к&nbsp;ЕГЭ <br>
+                  по&nbsp;математике, первая <br> и&nbsp;вторая часть<br>
+                  с&nbsp;лучшими<br> специалистами<br> Галактики!</p>
+              </main>
+              <footer class="course-card__footer">
+                <p>
+                  140+ часов занятий, вебинары, домашка,
+                  наставничество и отборная теория!
+                </p>
+              </footer>
+            </article>
+          </div>
+          <div class="course-card__shadow" style="--layer: 1"></div>
+          <div class="course-card__shadow" style="--layer: 2"></div>
+        </div>
+        <div class="courses__bottom">
+          <div class="courses__price">
+            от <span>2300</span> руб/месяц
+          </div>
+          <button type="button" class="animate-btn courses__button">
+            <span class="animate-btn__text">Купить курс</span>
+            <span class="animate-btn__effect-container">
+      <span class="circle top-left"></span>
+      <span class="circle top-left"></span>
+      <span class="circle top-left"></span>
+
+      <span class="button effect-button"></span>
+
+      <span class="circle bottom-right"></span>
+      <span class="circle bottom-right"></span>
+      <span class="circle bottom-right"></span>
+</span>
+
+          </button>
+        </div>
+      </li>
+      <li class="courses__item">
+        <div class="course-card course-card--two">
+          <div class="course-card__wrapper">
+            <article class="course-card__content">
+              <header class="course-card__header">
+                <h1 class="course-card__title">Информатика - покори <span>Илона</span></h1>
+              </header>
+              <main class="course-card__main">
+                <p>Познай информатику,<br> как&nbsp;лучший начинающий<br>
+                  специалист, от&nbsp;систем<br> счисления до&nbsp;сложных<br> алгоритмических задач!</p>
+              </main>
+              <footer class="course-card__footer">
+                <p>
+                  140+ часов занятий, вебинары, домашка,
+                  наставничество и отборная теория!
+                </p>
+              </footer>
+            </article>
+          </div>
+          <div class="course-card__shadow" style="--layer: 1"></div>
+          <div class="course-card__shadow" style="--layer: 2"></div>
+        </div>
+        <div class="courses__bottom">
+          <div class="courses__price">
+            от <span>2300</span> руб/месяц
+          </div>
+          <button type="button" class="animate-btn courses__button">
+            <span class="animate-btn__text">Купить курс</span>
+            <span class="animate-btn__effect-container">
+      <span class="circle top-left"></span>
+      <span class="circle top-left"></span>
+      <span class="circle top-left"></span>
+
+      <span class="button effect-button"></span>
+
+      <span class="circle bottom-right"></span>
+      <span class="circle bottom-right"></span>
+      <span class="circle bottom-right"></span>
+</span>
+
+          </button>
+        </div>
+      </li>
+      <li class="courses__item">
+        <div class="course-card course-card--three">
+          <div class="course-card__wrapper">
+            <article class="course-card__content">
+              <header class="course-card__header">
+                <h1 class="course-card__title">Экспресс взлёт до <span>70</span> баллов!</h1>
+              </header>
+              <main class="course-card__main">
+                <p>Экспресс-старт от&nbsp;0 до 70 баллов в кратчайшие сроки:&nbsp;за&nbsp;три месяца! Доскональное изучение <br>
+                  с&nbsp;1&nbsp;по&nbsp;13 задания ЕГЭ Математика профиль!</p>
+              </main>
+              <footer class="course-card__footer">
+                <p>
+                  140+ часов занятий, вебинары, домашка,
+                  наставничество и отборная теория!
+                </p>
+              </footer>
+            </article>
+          </div>
+          <div class="course-card__shadow" style="--layer: 1"></div>
+          <div class="course-card__shadow" style="--layer: 2"></div>
+        </div>
+        <div class="courses__bottom">
+          <div class="courses__price">
+            от <span>2300</span> руб/месяц
+          </div>
+          <button type="button" class="animate-btn courses__button">
+            <span class="animate-btn__text">Купить курс</span>
+            <span class="animate-btn__effect-container">
+      <span class="circle top-left"></span>
+      <span class="circle top-left"></span>
+      <span class="circle top-left"></span>
+
+      <span class="button effect-button"></span>
+
+      <span class="circle bottom-right"></span>
+      <span class="circle bottom-right"></span>
+      <span class="circle bottom-right"></span>
+</span>
+
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
     </main>
 
     <footer class="footer"></footer>
 
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

@@ -10,6 +10,15 @@
 
   <div style="display: none;">
     <include src="build/img/sprite_auto.svg"></include>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo"/>
+        </filter>
+      </defs>
+    </svg>
   </div>
 
   <div class="wrapper">
@@ -17,11 +26,16 @@
 
     <main class="main-content">
       <include src="source/html/components/banner.html"></include>
+      <include src="source/html/components/courses.html"></include>
     </main>
 
     <include src="source/html/base/footer.html"></include>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

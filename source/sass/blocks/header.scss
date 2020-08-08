@@ -7,6 +7,11 @@
   height: auto;
   padding: 12px 0 0;
   color: #ffffff;
+  transition: background-color 0.3s;
+
+  &--fix {
+    background-color: #1a0824;
+  }
 
   &__wrapper {
     display: flex;

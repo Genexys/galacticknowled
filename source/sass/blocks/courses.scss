@@ -1,0 +1,163 @@
+.courses {
+  padding-top: 185px;
+  background-image: url('../img/bg/star-second-screen.png');
+  background-size: cover;
+  background-position: 0 27%;
+
+  &__title {
+    margin: 0 0 55px;
+    font-size: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(var(--column-count-course), 1fr);
+    grid-gap: 50px 30px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 90px;
+    list-style: none;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__price {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 45px;
+
+    span {
+      font-size: 23px;
+      color: $color-yellow;
+    }
+  }
+
+  &__button {
+    @include button;
+    padding: 5px 51px 11px;
+    font-size: 20px;
+  }
+}
+
+.course-card {
+  position: relative;
+  height: 400px;
+  border-radius: 31px;
+  margin-bottom: 30px;
+
+  &--one {
+    background-image: linear-gradient(122deg, rgb(252,105,176) 0%, rgb(222, 67, 224) 18%, rgb(195, 35, 254) 49%, rgb(155, 81, 255) 77%, rgb(119, 100, 255) 100%);
+
+    .course-card__wrapper {
+      &::before {
+        background-image: url('../img/content/planet-course-1.png');
+      }
+    }
+  }
+
+  &--two {
+    background-image: linear-gradient( 122deg, rgb(203,65,182) 0%, rgb(211,78,150) 35%, rgb(142,73,213) 69%, rgb(112,87,171) 100%);
+
+    .course-card__wrapper {
+      &::before {
+        background-image: url('../img/content/planet-course-2.png');
+      }
+    }
+  }
+
+  &--three {
+    background-image: linear-gradient( 122deg, rgb(72,196,197) 0%, rgb(90,181,240) 18%, rgb(116,149,245) 49%, rgb(166,98,228) 77%, rgb(181,94,190) 100%);
+
+    .course-card__wrapper {
+      &::before {
+        background-image: url('../img/content/planet-course-3.png');
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__shadow {
+    --width-subtrahend: calc(6% * var(--layer, 0));
+    position: absolute;
+    top: calc(3% * var(--layer, 0));
+    left: calc(3% * var(--layer, 0));
+    z-index: calc(var(--layer, 0) * -1);
+    width: calc(100% - var(--width-subtrahend));
+    height: 100%;
+    opacity: 0.3;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 62px 10px 42px 20px;
+  }
+
+  &__title {
+    margin: 0;
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+
+    span {
+      color: $color-yellow;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-yellow;
+      background: linear-gradient(to right, $color-yellow 0%, rgba(255, 255, 255, 0) 70%);
+    }
+  }
+
+  &__main {
+    flex: 1;
+    padding-top: 55px;
+    padding-bottom: 45px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    opacity: 0.6;
+
+    p {
+      margin: 0;
+    }
+  }
+}

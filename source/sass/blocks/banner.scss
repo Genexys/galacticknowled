@@ -1,6 +1,7 @@
 .main-banner {
   position: relative;
-  padding-top: 300px;
+  padding-top: 305px;
+  padding-bottom: 20px;
   background-image: url('../img/bg/star-first-screen.png');
   background-size: cover;
   background-position: -25px 8%;
@@ -13,7 +14,7 @@
     left: 0;
     bottom: 0;
     z-index: 0;
-    background-image: url('../img/content/flare-first-screen.png');
+    //background-image: url('../img/content/flare-first-screen.png');
     background-repeat: no-repeat;
     opacity: 0.2;
   }
@@ -59,11 +60,12 @@
     z-index: 1;
     width: 50%;
     height: 100%;
+    pointer-events: none;
 
     .small-planet {
       position: absolute;
       top: 145px;
-      left: -100px;
+      left: -40px;
       z-index: 2;
     }
 

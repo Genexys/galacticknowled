@@ -49,8 +49,8 @@
   padding: 13px 64px 20px;
   border: none;
   border-radius: 40px;
-  background-color: #f8ca40;
-  background: linear-gradient(0, #d14e31 0%, #fddb42 100%);
+  //background-color: #f8ca40;
+  //background: linear-gradient(0, #d14e31 0%, #fddb42 100%);
   font-weight: 600;
   font-size: 25px;
   line-height: 45px;
@@ -84,14 +84,6 @@
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     background: linear-gradient(to right, rgba(172, 34, 26, .45) 0%, rgba(255, 255, 255, 0) 100%);
-  }
-
-  span {
-    position: relative;
-    z-index: 2;
-    display: inline-block;
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
   }
 
   &:hover {

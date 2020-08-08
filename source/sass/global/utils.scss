@@ -50,3 +50,69 @@ input[type="radio"].visually-hidden {
   background: $color-transparent;
   border: none;
 }
+
+.animate-btn {
+  position: relative;
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &__effect-container {
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 400%;
+    top: -150%;
+    left: -50%;
+    border-radius: 20px;
+    filter: url(#goo);
+    transition: all 0.1s ease-out;
+    pointer-events: none;
+
+    .circle {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      background: $color-yellow;
+      transition: background 0.1s ease-out;
+
+      &.top-left {
+        top: 40%;
+        left: 27%;
+      }
+
+      &.bottom-right {
+        bottom: 40%;
+        right: 27%;
+      }
+    }
+
+    .effect-button {
+      position: absolute;
+      width: 50%;
+      height: 25%;
+      top: 50%;
+      left: 25%;
+      z-index: 1;
+      border-radius: 40px;
+      transform: translateY(-50%);
+      background: linear-gradient(0, #d14e31 0%, #fddb42 100%);
+      transition: background 0.1s ease-out;
+    }
+  }
+}
+
+@keyframes hue-rotate {
+  from {
+    filter: hue-rotate(0);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
