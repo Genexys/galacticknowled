@@ -14,9 +14,10 @@
     left: 0;
     bottom: 0;
     z-index: 0;
-    //background-image: url('../img/content/flare-first-screen.png');
+    background: radial-gradient(#7c3b67 5%,rgba(255,255,255,0) 68%);
+    background-position: 50% 50%;
     background-repeat: no-repeat;
-    opacity: 0.2;
+    //opacity: 0.2;
   }
 
   &__content {
@@ -64,7 +65,7 @@
 
     .small-planet {
       position: absolute;
-      top: 145px;
+      top: 44px;
       left: -40px;
       z-index: 2;
     }
@@ -78,7 +79,7 @@
 
     .big-planet {
       position: absolute;
-      top: 183px;
+      top: 210px;
       right: 0;
       z-index: 2;
     }

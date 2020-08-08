@@ -51,6 +51,27 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+
+.main-content {
+  position: relative;
+
+  //&::before {
+  //  content: "";
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  width: 100%;
+  //  height: 800px;
+  //  z-index: 0;
+  //  background-image: url('../img/bg/flare-first-screen.png');
+  //  background-size: contain;
+  //  background-position: 50% 50%;
+  //  //background: radial-gradient(#7c3b67 2%,rgba(255,255,255,0) 63%);
+  //  background-repeat: no-repeat;
+  //  //opacity: 0.2;
+  //}
+}
+
 .animate-btn {
   position: relative;
 
