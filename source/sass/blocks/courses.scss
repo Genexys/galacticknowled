@@ -1,4 +1,5 @@
 .courses {
+  position: relative;
   padding-top: 185px;
   background-image: url('../img/bg/star-second-screen.png');
   background-size: cover;
@@ -42,6 +43,11 @@
     @include button;
     padding: 5px 51px 11px;
     font-size: 20px;
+  }
+
+  .asteroid {
+    position: absolute;
+    top: 60px;
   }
 }
 
@@ -182,6 +188,40 @@
 
     p {
       margin: 0;
+    }
+  }
+}
+
+.steps-learn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    display: block;
+
+    + .steps-learn__text {
+      margin-top: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    + .steps-learn__img {
+      margin-top: 10px;
     }
   }
 }

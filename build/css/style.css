@@ -1422,6 +1422,7 @@ input[type="radio"].visually-hidden {
       right: 150px; }
 
 .courses {
+  position: relative;
   padding-top: 185px;
   background-image: url("../img/bg/star-second-screen.png");
   background-size: cover;
@@ -1507,6 +1508,9 @@ input[type="radio"].visually-hidden {
       opacity: 0.9; }
       .courses__button:hover::after {
         opacity: 0.5; }
+  .courses .asteroid {
+    position: absolute;
+    top: 60px; }
 
 .course-card {
   position: relative;
@@ -1610,6 +1614,45 @@ input[type="radio"].visually-hidden {
     opacity: 0.6; }
     .course-card__footer p {
       margin: 0; }
+
+.steps-learn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0; }
+  .steps-learn__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .steps-learn__img {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: block; }
+    .steps-learn__img + .steps-learn__text {
+      margin-top: 10px; }
+  .steps-learn__text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center; }
+    .steps-learn__text + .steps-learn__img {
+      margin-top: 10px; }
 
 .footer {
   height: 100px;
