@@ -3,11 +3,14 @@ const parallax = () => {
 
   const banner = document.querySelector(`.main-banner`);
   const courses = document.querySelector(`.courses`);
+  const why = document.querySelector(`.why-way`);
   const planets = banner.querySelectorAll(`.animate-planet`);
   const rocket = banner.querySelectorAll(`.rocket`);
   const asteroid = document.querySelector(`.asteroid`);
+  const comet = document.querySelector(`.comet`);
   const tlBanner = new TimelineMax();
   const tlCourses = new TimelineMax();
+  const tlWhy = new TimelineMax();
 
   tlBanner
     .to(planets[0], 6, {
@@ -26,6 +29,12 @@ const parallax = () => {
       x: -100,
     });
 
+  tlWhy
+    .to(comet, 6, {
+      y: 100,
+      x: -100,
+    });
+
   let sceneBanner = new ScrollMagic.Scene({
     triggerElement: banner,
     duration: "200%",
@@ -40,6 +49,14 @@ const parallax = () => {
     triggerHook: 0
   })
     .setTween(tlCourses)
+    .addTo(controller);
+
+  let sceneWhy = new ScrollMagic.Scene({
+    triggerElement: why,
+    duration: "200%",
+    triggerHook: 0
+  })
+    .setTween(tlWhy)
     .addTo(controller);
 };
 
