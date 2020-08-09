@@ -1,0 +1,165 @@
+.teachers {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url('../img/bg/star-four-screen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -78px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 55px;
+    font-size: 30px;
+  }
+}
+
+.teachers-list {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    &:nth-of-type(2) {
+      &::after {
+        background-image: url('../img/content/teachers/planet-teacher-2.png');
+      }
+    }
+
+    &:nth-of-type(3) {
+      &::after {
+        background-image: url('../img/content/teachers/planet-teacher-3.png');
+      }
+    }
+
+    &:nth-of-type(4) {
+      &::after {
+        background-image: url('../img/content/teachers/planet-teacher-4.png');
+      }
+    }
+  }
+}
+
+.teacher {
+  position: relative;
+  border-radius: 20px;
+  background-color: #8e569b;
+  background: linear-gradient(to bottom, rgba(142, 86, 155, 0.5) 42%, rgba(255, 255, 255, 0) 105%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url('../img/bg/wave-person-card.png');
+    background-repeat: no-repeat;
+    background-position: 155px 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background-image: url('../img/content/teachers/planet-teacher-1.png');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 5;
+    display: flex;
+  }
+
+  &__img {
+    position: relative;
+    margin: 0;
+    border-radius: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border-radius: 20px;
+      background: rgba(142,86,155, 0.5);
+      background: radial-gradient(circle,rgba(112,87,171,0) 31%,rgba(142,73,213,.594275) 72%,rgba(211,78,150,.83237) 100%,#cb41b6 100%);
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__content {
+    padding-top: 15px;
+    padding-left: 65px;
+  }
+
+  &__name {
+    margin: 0 0 15px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &__about {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 25px;
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      display: block;
+      margin-right: 10px;
+    }
+
+    span {
+      opacity: .46;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}

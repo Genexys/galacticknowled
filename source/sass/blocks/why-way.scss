@@ -1,6 +1,7 @@
 .why-way {
   position: relative;
   padding-top: 70px;
+  padding-bottom: 30px;
 
   &::after {
     content: "";
@@ -13,6 +14,7 @@
     background-image: url('../img/bg/why-planet.png');
     background-repeat: no-repeat;
     background-position: 0 160px;
+    background-size: contain;
   }
 
   &::before {

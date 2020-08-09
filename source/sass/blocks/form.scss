@@ -1,0 +1,122 @@
+.form-block {
+  padding-top: 32px;
+  padding-bottom: 100px;
+
+  &__wrapper {
+    position: relative;
+    padding: 20px 50px 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px -11px #f194cb;
+    background-color: rgba(40, 144, 136, 0.3);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border-radius: 20px;
+      background-color: #481564;
+      opacity: .8;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 108px;
+      height: 100%;
+      background-image: url('../img/content/form-cloud.png');
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      background-size: contain;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 4;
+    margin: 0 0 33px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  &__descr {
+    position: relative;
+    z-index: 3;
+    margin: 25px 0 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .form-cat {
+    position: absolute;
+    top: 32px;
+    left: 22px;
+    z-index: 3;
+  }
+
+  .gradient {
+    position: absolute;
+    top: -84px;
+    left: -178px;
+    z-index: 2;
+    height: 140%;
+    width: 39%;
+    background: radial-gradient(circle,#8325ab -14%,rgba(255,255,255,0) 85%);
+  }
+}
+
+.main-form {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  padding-left: 114px;
+
+  &__group {
+    position: relative;
+    max-width: 290px;
+    width: 100%;
+    margin-right: 20px;
+
+    &--phone {
+      max-width: 335px;
+    }
+  }
+
+  &__control {
+    width: 100%;
+    height: 68px;
+    padding-left: 32px;
+    border-radius: 34px;
+    border: none;
+    box-shadow: 0 0 21.84px 2.16px rgba(0, 0, 0, 0.004);
+    background-color: rgba(238, 237, 237, 0.10);
+    font-size: 14px;
+    color: #ffffff;
+    transition: background-color 0.2s, color 0.2s;
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+
+  &__button {
+    @include button;
+    padding: 13px 44px;
+    font-size: 20px;
+    line-height: 34px;
+  }
+}

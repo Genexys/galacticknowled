@@ -55,7 +55,8 @@
     "webpack-stream": "5.2.1"
   },
   "dependencies": {
-    "del": "^5.1.0"
+    "del": "^5.1.0",
+    "vanilla-masker": "^1.2.0"
   },
   "engines": {
     "node": "8.15"
