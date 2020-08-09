@@ -2,10 +2,11 @@
   position: relative;
   padding-top: 185px;
   background-image: url('../img/bg/star-second-screen.png');
-  background-size: cover;
-  background-position: 0 27%;
+  background-position: 2px -52%;
 
   &__title {
+    position: relative;
+    z-index: 2;
     margin: 0 0 55px;
     font-size: 30px;
   }
@@ -16,7 +17,7 @@
     grid-gap: 50px 30px;
     padding: 0;
     margin: 0;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
     list-style: none;
   }
 
@@ -193,22 +194,93 @@
 }
 
 .steps-learn {
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 110px;
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    &--left {
+      position: absolute;
+      left: -88px;
+      top: -85px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -56px;
+        top: -105px;
+        width: 138px;
+        height: 53px;
+        transform: rotate(106deg);
+        background-image: url(../img/content/line-down.png);
+        background-repeat: no-repeat;
+      }
+
+      &::after {
+        top: 46px!important;
+        left: 88px;
+        background-image: url(../img/content/line-up.png);
+        transform: rotate(20deg);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -160%;
+      width: 138px;
+      height: 53px;
+      background-repeat: no-repeat;
+    }
+
+    &:not(.steps-learn__item--left) {
+      &:nth-child(even) {
+        margin-bottom: 20px;
+
+        &:not(:last-of-type) {
+          &::after {
+            top: 75px;
+            background-image: url('../img/content/line-down.png');
+          }
+        }
+      }
+
+      &:nth-child(odd) {
+        margin-left: 26px;
+        margin-top: 10px;
+
+        &:not(:last-of-type) {
+          &::after {
+            top: -35px;
+            right: -140%;
+            background-image: url('../img/content/line-up.png');
+          }
+        }
+      }
+
+      &:nth-of-type(5) {
+        &::after {
+          top: -20px !important;
+          right: -120% !important;
+        }
+      }
+    }
   }
 
   &__img {
     flex-shrink: 0;
     display: block;
+    width: 86px;
 
     + .steps-learn__text {
       margin-top: 10px;

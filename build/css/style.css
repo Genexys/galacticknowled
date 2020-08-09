@@ -1408,7 +1408,7 @@ input[type="radio"].visually-hidden {
     .main-banner__big-planet .rocket {
       position: absolute;
       top: 275px;
-      right: 270px;
+      right: 28%;
       z-index: 2; }
     .main-banner__big-planet .big-planet {
       position: absolute;
@@ -1425,9 +1425,10 @@ input[type="radio"].visually-hidden {
   position: relative;
   padding-top: 185px;
   background-image: url("../img/bg/star-second-screen.png");
-  background-size: cover;
-  background-position: 0 27%; }
+  background-position: 2px -52%; }
   .courses__title {
+    position: relative;
+    z-index: 2;
     margin: 0 0 55px;
     font-size: 30px; }
   .courses__list {
@@ -1438,7 +1439,7 @@ input[type="radio"].visually-hidden {
     grid-gap: 50px 30px;
     padding: 0;
     margin: 0;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
     list-style: none; }
   .courses__bottom {
     display: -webkit-box;
@@ -1616,18 +1617,20 @@ input[type="radio"].visually-hidden {
       margin: 0; }
 
 .steps-learn {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0;
-  padding: 0; }
+  padding: 0 0 0 110px; }
   .steps-learn__item {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1641,10 +1644,55 @@ input[type="radio"].visually-hidden {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    .steps-learn__item--left {
+      position: absolute;
+      left: -88px;
+      top: -85px; }
+      .steps-learn__item--left::before {
+        content: "";
+        position: absolute;
+        left: -56px;
+        top: -105px;
+        width: 138px;
+        height: 53px;
+        -webkit-transform: rotate(106deg);
+                transform: rotate(106deg);
+        background-image: url(../img/content/line-down.png);
+        background-repeat: no-repeat; }
+      .steps-learn__item--left::after {
+        top: 46px !important;
+        left: 88px;
+        background-image: url(../img/content/line-up.png);
+        -webkit-transform: rotate(20deg);
+                transform: rotate(20deg); }
+    .steps-learn__item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -160%;
+      width: 138px;
+      height: 53px;
+      background-repeat: no-repeat; }
+    .steps-learn__item:not(.steps-learn__item--left):nth-child(even) {
+      margin-bottom: 20px; }
+      .steps-learn__item:not(.steps-learn__item--left):nth-child(even):not(:last-of-type)::after {
+        top: 75px;
+        background-image: url("../img/content/line-down.png"); }
+    .steps-learn__item:not(.steps-learn__item--left):nth-child(odd) {
+      margin-left: 26px;
+      margin-top: 10px; }
+      .steps-learn__item:not(.steps-learn__item--left):nth-child(odd):not(:last-of-type)::after {
+        top: -35px;
+        right: -140%;
+        background-image: url("../img/content/line-up.png"); }
+    .steps-learn__item:not(.steps-learn__item--left):nth-of-type(5)::after {
+      top: -20px !important;
+      right: -120% !important; }
   .steps-learn__img {
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    display: block; }
+    display: block;
+    width: 86px; }
     .steps-learn__img + .steps-learn__text {
       margin-top: 10px; }
   .steps-learn__text {
