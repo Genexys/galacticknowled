@@ -1,4 +1,71 @@
 .footer {
-  height: 100px;
-  background-color: rgba(0, 81, 255, 0.9);
+  position: relative;
+  z-index: 5;
+  padding-top: 189px;
+  padding-bottom: 120px;
+  background-color: #712a72;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    max-width: 908px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 0;
+    color: #cc9cff;
+  }
+
+  &__descr {
+    max-width: 325px;
+  }
+
+  &__social {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      a {
+        display: block;
+        width: 67px;
+        height: 67px;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &.instagram {
+          background-image: url('../img/content/socials/001-instagram.png');
+        }
+
+        &.vkontakte {
+          background-image: url('../img/content/socials/004-vk-social-logotype.png');
+        }
+
+        &.whatsapp {
+          background-image: url('../img/content/socials/002-whatsapp.png');
+        }
+
+        &.telegram {
+          background-image: url('../img/content/socials/003-telegram.png');
+        }
+      }
+    }
+  }
+}
+
+.footer-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
 }

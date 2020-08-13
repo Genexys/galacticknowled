@@ -2,6 +2,11 @@
   outline: none;
 }
 
+body {
+  background-color: #220d29;
+  background: linear-gradient(to bottom, rgba(26,9,36,1) 0%, rgba(86,24,119,1) 55%);
+}
+
 .visually-hidden,
 input[type="file"].visually-hidden,
 input[type="checkbox"].visually-hidden,
@@ -30,9 +35,6 @@ input[type="radio"].visually-hidden {
   min-height: 100vh;
   overflow-x: hidden;
 
-  background-color: #220d29;
-  background: linear-gradient(to bottom, rgba(26,9,36,1) 0%, rgba(86,24,119,1) 55%);
-
   .header,
   .footer {
     flex-shrink: 0;
@@ -55,6 +57,15 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+.input-wrapper {
+  transition: border-color 0.3s;
+
+  &--error {
+    input {
+      border: 1px solid #ec1c24 !important;
+    }
+  }
+}
 
 .main-content {
   position: relative;

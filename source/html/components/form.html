@@ -1,26 +1,30 @@
 <div class="form-block">
   <div class="container">
     <div class="form-block__wrapper">
-      <p class="form-block__title">Запишись на курс!</p>
-      <i class="gradient"></i>
-      <img src="img/content/form-cat.png" class="form-cat" alt="кот" title="кот">
+      <img src="img/content/form-planet.png" class="form-planet" alt="Планета" title="Планета">
+      <div class="form-block__inner">
+        <p class="form-block__title">Запишись на курс!</p>
+        <i class="gradient"></i>
+        <img src="img/content/form-cat.png" class="form-cat" alt="кот" title="кот">
+        <img src="img/content/form-planet-mini.png" class="form-planet-mini" alt="Планета" title="Планета">
 
-      <form class="main-form" novalidate="novalidate">
-        <div class="main-form__group">
-          <input class="main-form__control" id="name" name="name" type="text" placeholder="Введите Ваше имя*">
-        </div>
-        <div class="main-form__group main-form__group--phone">
-          <input class="main-form__control data-phone-input" id="phone" name="phone" type="tel" placeholder="Введите номер телефона*">
-        </div>
-        <button type="button" class="animate-btn main-form__button">
-          <span class="animate-btn__text">Хочу учиться</span>
-          <include src="source/html/components/animate-container-button.html"></include>
-        </button>
-      </form>
+        <form action="" method="post" class="main-form" novalidate="novalidate">
+          <div class="input-wrapper main-form__group">
+            <input class="main-form__control" id="name" name="name" type="text" placeholder="Введите Ваше имя*">
+          </div>
+          <div class="input-wrapper main-form__group main-form__group--phone">
+            <input class="main-form__control data-phone-input" id="phone" name="phone" type="tel" placeholder="Введите номер телефона*">
+          </div>
+          <button type="submit" class="animate-btn main-form__button">
+            <span class="animate-btn__text">Хочу учиться</span>
+            <include src="source/html/components/animate-container-button.html"></include>
+          </button>
+        </form>
 
-      <p class="form-block__descr">
-        Нажимая на кнопку, вы даете согласие на <a href="">обработку персональных данных</a>
-      </p>
+        <p class="form-block__descr">
+          Нажимая на кнопку, вы даете согласие на <a href="">обработку персональных данных</a>
+        </p>
+      </div>
     </div>
   </div>
 </div>

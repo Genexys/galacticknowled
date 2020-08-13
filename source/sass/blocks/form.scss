@@ -1,14 +1,16 @@
 .form-block {
   padding-top: 32px;
-  padding-bottom: 100px;
+  padding-bottom: 75px;
+  background-image: url('../img/bg/star-five-screen.png');
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  background-position: 50% -78px;
 
   &__wrapper {
     position: relative;
-    padding: 20px 50px 35px;
     border-radius: 20px;
     box-shadow: 0 0 20px -11px #f194cb;
     background-color: rgba(40, 144, 136, 0.3);
-    overflow: hidden;
 
     &::before {
       content: "";
@@ -19,8 +21,14 @@
       bottom: 0;
       border-radius: 20px;
       background-color: #481564;
-      opacity: .8;
+      opacity: 0.7;
     }
+  }
+
+  &__inner {
+    position: relative;
+    padding: 20px 50px 35px;
+    overflow: hidden;
 
     &::after {
       content: "";
@@ -65,6 +73,20 @@
     top: 32px;
     left: 22px;
     z-index: 3;
+  }
+
+  .form-planet {
+    position: absolute;
+    top: -49px;
+    left: -62px;
+    z-index: 3;
+  }
+
+  .form-planet-mini {
+    position: absolute;
+    bottom: 24px;
+    left: 164px;
+    z-index: 4;
   }
 
   .gradient {
