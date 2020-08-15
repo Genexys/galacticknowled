@@ -4,6 +4,9 @@ const reviews = () => {
     // loop: true,
     slidesPerView: 1,
     spaceBetween: 10,
+    centeredSlides: true,
+    roundLengths: true,
+    loop: true,
 
     navigation: {
       nextEl: '.swiper-button-next',

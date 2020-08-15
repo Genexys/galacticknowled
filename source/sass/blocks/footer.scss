@@ -1,9 +1,8 @@
 .footer {
   position: relative;
   z-index: 5;
-  padding-top: 189px;
-  padding-bottom: 120px;
-  background-color: #712a72;
+  padding-top: 118px;
+  padding-bottom: 196px;
 
   &::before {
     content: "";
@@ -13,53 +12,189 @@
   }
 
   &__container {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: center;
     max-width: 908px;
     width: 100%;
     margin: 0 auto;
+    font-size: 18px;
+    line-height: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 250px;
+      background-color: rgba(255, 255, 255, .2);
+    }
+  }
+
+  &__cell {
+    width: 50%;
+
+    &:nth-of-type(1) {
+      padding-right: 85px;
+      text-align: right;
+    }
+
+    &:nth-of-type(2) {
+      padding-left: 85px;
+
+      .footer__descr {
+        margin-right: auto;
+        margin-left: 0;
+        margin-bottom: 5px;
+        text-align: left;
+
+        a {
+          margin-bottom: 4px;
+        }
+
+        span {
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
+    }
   }
 
   &__title {
-    margin: 0;
+    margin: 0 0 20px;
+    font-weight: 600;
+    font-size: 30px;
     color: #cc9cff;
   }
 
   &__descr {
-    max-width: 325px;
+    margin: 0 0 20px auto;
+    max-width: 327px;
+    text-align: right;
+
+    a {
+      display: block;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
   }
 
   &__social {
     display: flex;
-    margin: 0;
+    margin: 0 0 20px;
     padding: 0;
     list-style: none;
 
     li {
+
+      &:not(:first-of-type) {
+        margin-left: 30px;
+      }
+
       a {
         display: block;
         width: 67px;
         height: 67px;
+        border-radius: 50%;
+        box-shadow: 0 0 30px 7px rgba(#000, 0.19);
         background-repeat: no-repeat;
         background-size: contain;
+        transition: box-shadow 0.3s;
 
-        &.instagram {
-          background-image: url('../img/content/socials/001-instagram.png');
+        &:hover {
+          box-shadow: 0 0 30px 7px rgba(#fff, 0.19);
         }
 
-        &.vkontakte {
-          background-image: url('../img/content/socials/004-vk-social-logotype.png');
+        svg {
+          fill: #cc9cff;
+          //use {
+          //  fill: #cc9cff;
+          //}
+
         }
 
-        &.whatsapp {
-          background-image: url('../img/content/socials/002-whatsapp.png');
-        }
+        //&.instagram {
+        //  background-image: url('../img/content/socials/001-instagram.png');
+        //
+        //  &:hover {
+        //    background-image: url('../img/content/socials/001-instagram-light.png');
+        //  }
+        //}
+        //
+        //&.vkontakte {
+        //  background-image: url('../img/content/socials/004-vk-social-logotype.png');
+        //
+        //  &:hover {
+        //    background-image: url('../img/content/socials/004-vk-social-logotype-light.png');
+        //  }
+        //}
+        //
+        //&.whatsapp {
+        //  background-image: url('../img/content/socials/002-whatsapp.png');
+        //
+        //  &:hover {
+        //    background-image: url('../img/content/socials/002-whatsapp-light.png');
+        //  }
+        //}
+        //
+        //&.telegram {
+        //  background-image: url('../img/content/socials/003-telegram.png');
+        //
+        //  &:hover {
+        //    background-image: url('../img/content/socials/003-telegram-light.png');
+        //  }
+        //}
 
-        &.telegram {
-          background-image: url('../img/content/socials/003-telegram.png');
-        }
+
       }
     }
+  }
+
+  &__bottom-text {
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+}
+
+.link-mail {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 29px;
+    height: 19px;
+    margin-left: 15px;
+    background-image: url('../img/content/002-email.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.link-phone {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 31px;
+    height: 26px;
+    margin-left: 15px;
+    background-image: url('../img/content/001-phone-call.png');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -67,5 +202,6 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  z-index: 1;
   pointer-events: none;
 }

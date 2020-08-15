@@ -11,6 +11,7 @@ const rename = require(`gulp-rename`);
 const imagemin = require(`gulp-imagemin`);
 const webp = require(`gulp-webp`);
 const svgstore = require(`gulp-svgstore`);
+const cheerio = require('gulp-cheerio');
 const posthtml = require(`gulp-posthtml`);
 const include = require(`posthtml-include`);
 const del = require(`del`);
@@ -65,6 +66,7 @@ gulp.task(`svgo`, function () {
               {removeViewBox: false},
               {removeRasterImages: true},
               {removeUselessStrokeAndFill: false},
+              {removeAttrs: {attrs:['fill']}}
             ]
           }),
       ]))
@@ -88,6 +90,13 @@ gulp.task(`webp`, function () {
 
 gulp.task(`sprite`, function () {
   return gulp.src(`source/img/sprite/*.svg`)
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: { xmlMode: true }
+    }))
       .pipe(svgstore({inlineSvg: true}))
       .pipe(rename(`sprite_auto.svg`))
       .pipe(gulp.dest(`build/img`));

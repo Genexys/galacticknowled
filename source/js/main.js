@@ -9,9 +9,6 @@ import {phoneMask} from "./modules/phoneMask";
 import {validateMainForm} from "./modules/validateMainForm";
 import {reviews} from "./modules/reviews";
 import {goToBtn} from "./modules/goToBtn";
-import {getValueCourse} from "./modules/getValueCourse";
-
-
 
 // Utils
 // ---------------------------------
@@ -30,4 +27,3 @@ phoneMask();
 validateMainForm();
 reviews();
 goToBtn();
-getValueCourse();

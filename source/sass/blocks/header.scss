@@ -86,7 +86,8 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &--active {
       color: #fad041;
 
       &::before {
