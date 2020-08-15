@@ -52,16 +52,16 @@
     <nav class="header__nav">
       <ul class="header__list-menu">
         <li class="header__item-menu">
-          <a href="" class="header__item-link">Курсы</a>
+          <a href="" class="header__item-link btn-action" data-btn-scroll="courses">Курсы</a>
         </li>
         <li class="header__item-menu">
-          <a href="" class="header__item-link">Преподаватели</a>
+          <a href="" class="header__item-link btn-action" data-btn-scroll="teachers">Преподаватели</a>
         </li>
         <li class="header__item-menu">
-          <a href="" class="header__item-link">Преимущества</a>
+          <a href="" class="header__item-link btn-action" data-btn-scroll="advantages">Преимущества</a>
         </li>
         <li class="header__item-menu">
-          <a href="" class="header__item-link">Отзывы</a>
+          <a href="" class="header__item-link btn-action" data-btn-scroll="reviews">Отзывы</a>
         </li>
       </ul>
     </nav>
@@ -90,7 +90,7 @@
         Узнай о курсах от преподавателя
       </p>
 
-      <button type="button" class="animate-btn main-banner__button">
+      <button type="button" class="btn-action animate-btn main-banner__button" data-btn-scroll="form">
         <span class="animate-btn__text">Хочу узнать!</span>
         <span class="animate-btn__effect-container">
       <span class="circle top-left"></span>
@@ -116,7 +116,7 @@
   </div>
 </div>
 
-      <section class="courses">
+      <section class="courses data-content" data-content="courses">
   <img src="img/content/asteroid.png" class="asteroid" alt="комета" title="комета">
   <div class="container">
     <h2 class="courses__title">Наши космические курсы</h2>
@@ -149,7 +149,7 @@
           <div class="courses__price">
             от <span>2300</span> руб/месяц
           </div>
-          <button type="button" class="animate-btn courses__button">
+          <button type="button" class="btn-action animate-btn courses__button" data-btn-scroll="form" data-value-course="Математика - с нуля">
             <span class="animate-btn__text">Купить курс</span>
             <span class="animate-btn__effect-container">
       <span class="circle top-left"></span>
@@ -192,7 +192,7 @@
           <div class="courses__price">
             от <span>2300</span> руб/месяц
           </div>
-          <button type="button" class="animate-btn courses__button">
+          <button type="button" class="btn-action animate-btn courses__button" data-btn-scroll="form" data-value-course="Информатика">
             <span class="animate-btn__text">Купить курс</span>
             <span class="animate-btn__effect-container">
       <span class="circle top-left"></span>
@@ -236,7 +236,7 @@
           <div class="courses__price">
             от <span>2300</span> руб/месяц
           </div>
-          <button type="button" class="animate-btn courses__button">
+          <button type="button" class="btn-action animate-btn courses__button" data-btn-scroll="form" data-value-course="Экспресс взлёт">
             <span class="animate-btn__text">Купить курс</span>
             <span class="animate-btn__effect-container">
       <span class="circle top-left"></span>
@@ -297,7 +297,7 @@
   </div>
 </section>
 
-      <section class="why-way">
+      <section class="why-way data-content" data-content="advantages">
   <div class="container">
     <h2 class="why-way__title">
       Почему тебе с нами по пути
@@ -409,7 +409,7 @@
   <img src="img/content/comet.png" class="comet" alt="комет" title="комета">
 </section>
 
-      <section class="teachers">
+      <section class="teachers data-content" data-content="teachers">
   <div class="container">
     <h2 class="teachers__title">
       Преподаватели Галактики
@@ -504,7 +504,7 @@
   </div>
 </section>
 
-      <div class="form-block">
+      <div class="form-block data-content" data-content="form">
   <div class="container">
     <div class="form-block__wrapper">
       <img src="img/content/form-planet.png" class="form-planet" alt="Планета" title="Планета">
@@ -515,10 +515,16 @@
         <img src="img/content/form-planet-mini.png" class="form-planet-mini" alt="Планета" title="Планета">
 
         <form action="" method="post" class="main-form" novalidate="novalidate">
+          <div class="input-wrapper visually-hidden">
+            <input class="main-form__control" id="name-form" name="name-form" hidden="" data-ignored="">
+          </div>
+
           <div class="input-wrapper main-form__group">
+            <span class="input-wrapper__error-text">Это поле нужно заполнить</span>
             <input class="main-form__control" id="name" name="name" type="text" placeholder="Введите Ваше имя*">
           </div>
           <div class="input-wrapper main-form__group main-form__group--phone">
+            <span class="input-wrapper__error-text">Это поле нужно заполнить</span>
             <input class="main-form__control data-phone-input" id="phone" name="phone" type="tel" placeholder="Введите номер телефона*">
           </div>
           <button type="submit" class="animate-btn main-form__button">
@@ -546,7 +552,7 @@
   </div>
 </div>
 
-      <div class="reviews">
+      <div class="reviews data-content" data-content="reviews">
   <div class="container">
 
     <h2 class="reviews__title">Отзывы</h2>

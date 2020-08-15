@@ -65,9 +65,12 @@ const parallax = () => {
     let _mouseX = e.clientX;
     let _mouseY = e.clientY;
 
-    rocket.style.transform = `translate(-${(_mouseY - _h) * 0.01}%, ${(_mouseX - _w) * 0.01}%)`;
-    planets[0].style.transform = `translateY(-${(_mouseY - _h) * 0.02}%)`;
-    planets[1].style.transform = `translateY(${(_mouseY - _h) * 0.008}%)`;
+    // console.log(_mouseY, _mouseY)
+
+    // rocket.style.transform = `translate(-${(_mouseY - _h) * 0.01}%, ${(_mouseX - _w) * 0.01}%)`;
+    TweenLite.to(rocket, 1, {transform: `translate(-${(_mouseY - _h) * 0.01}%, ${(_mouseX - _w) * 0.01}%)`, ease:Power2.easeOut});
+    // planets[0].style.transform = `translateY(-${(_mouseY - _h) * 0.02}%)`;
+    // planets[1].style.transform = `translateY(${(_mouseY - _h) * 0.008}%)`;
   };
 
   window.addEventListener("mousemove", parallaxPanets);

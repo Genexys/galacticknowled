@@ -1,8 +1,15 @@
 const fixHeader = () => {
   const header = document.querySelector(`.header`);
+  let bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (bodyScrollTop >= 100) {
+    header.classList.add(`header--fix`);
+  } else {
+    header.classList.remove(`header--fix`);
+  }
 
   window.addEventListener(`scroll`, () => {
-    const bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
     if (bodyScrollTop >= 100) {
       header.classList.add(`header--fix`);

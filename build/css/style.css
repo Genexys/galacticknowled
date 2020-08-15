@@ -1323,10 +1323,29 @@ input[type="radio"].visually-hidden {
   border: none; }
 
 .input-wrapper {
+  position: relative;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s; }
+  .input-wrapper__error-text {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 100%;
+    display: block;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #ec1c24;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
   .input-wrapper--error input {
-    border: 1px solid #ec1c24 !important; }
+    border-color: #ec1c24 !important; }
+  .input-wrapper--error .input-wrapper__error-text {
+    opacity: 1; }
 
 .main-content {
   position: relative; }
@@ -1987,7 +2006,17 @@ input[type="radio"].visually-hidden {
     margin: 0 auto; }
   .why-list__descr {
     position: relative;
-    padding: 50px 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 205px;
+    padding: 30px 20px 36px;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
@@ -2096,8 +2125,17 @@ input[type="radio"].visually-hidden {
     .teacher__img img {
       display: block; }
   .teacher__content {
-    padding-top: 15px;
-    padding-left: 65px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 15px 0 15px 65px; }
   .teacher__name {
     margin: 0 0 15px;
     font-weight: 600;
@@ -2233,7 +2271,7 @@ input[type="radio"].visually-hidden {
     height: 68px;
     padding-left: 32px;
     border-radius: 34px;
-    border: none;
+    border: 1px solid transparent;
     -webkit-box-shadow: 0 0 21.84px 2.16px rgba(0, 0, 0, 0.004);
             box-shadow: 0 0 21.84px 2.16px rgba(0, 0, 0, 0.004);
     background-color: rgba(238, 237, 237, 0.1);

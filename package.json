@@ -56,7 +56,9 @@
   },
   "dependencies": {
     "del": "^5.1.0",
+    "inputmask": "^5.0.5",
     "micromodal": "^0.4.6",
+    "smoothscroll-polyfill": "^0.4.4",
     "vanilla-masker": "^1.2.0"
   },
   "engines": {

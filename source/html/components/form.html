@@ -1,4 +1,4 @@
-<div class="form-block">
+<div class="form-block data-content" data-content="form">
   <div class="container">
     <div class="form-block__wrapper">
       <img src="img/content/form-planet.png" class="form-planet" alt="Планета" title="Планета">
@@ -9,10 +9,16 @@
         <img src="img/content/form-planet-mini.png" class="form-planet-mini" alt="Планета" title="Планета">
 
         <form action="" method="post" class="main-form" novalidate="novalidate">
+          <div class="input-wrapper visually-hidden">
+            <input class="main-form__control" id="name-form" name="name-form" hidden data-ignored>
+          </div>
+
           <div class="input-wrapper main-form__group">
+            <span class="input-wrapper__error-text">Это поле нужно заполнить</span>
             <input class="main-form__control" id="name" name="name" type="text" placeholder="Введите Ваше имя*">
           </div>
           <div class="input-wrapper main-form__group main-form__group--phone">
+            <span class="input-wrapper__error-text">Это поле нужно заполнить</span>
             <input class="main-form__control data-phone-input" id="phone" name="phone" type="tel" placeholder="Введите номер телефона*">
           </div>
           <button type="submit" class="animate-btn main-form__button">

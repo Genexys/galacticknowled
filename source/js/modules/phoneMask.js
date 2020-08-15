@@ -1,8 +1,11 @@
-import VMasker from 'vanilla-masker';
+import Inputmask from "inputmask";
 
 const phoneMask = () => {
 
-  VMasker(document.querySelector(".data-phone-input")).maskPattern("+9(999)999-99-99");
+  Inputmask({
+    mask: "+7(999)999-99-99",
+    showMaskOnHover: false,
+  }).mask(document.querySelectorAll(`input[type="tel"]`));
 
 };
 

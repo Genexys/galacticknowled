@@ -119,8 +119,10 @@
   }
 
   &__content {
-    padding-top: 15px;
-    padding-left: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 0 15px 65px;
   }
 
   &__name {

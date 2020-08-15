@@ -58,11 +58,32 @@ input[type="radio"].visually-hidden {
 }
 
 .input-wrapper {
+  position: relative;
   transition: border-color 0.3s;
+
+  &__error-text {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 100%;
+    display: block;
+    transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #ec1c24;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
 
   &--error {
     input {
-      border: 1px solid #ec1c24 !important;
+      border-color: #ec1c24 !important;
+    }
+
+    .input-wrapper__error-text {
+      opacity: 1;
     }
   }
 }
