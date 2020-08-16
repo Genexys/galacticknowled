@@ -340,6 +340,38 @@ const goToBtn = () => {
   };
 
   btnLearnMore();
+
+  const spyScrolling = () => {
+    const sections = document.querySelectorAll(`section.data-content`);
+    const menuLinks = document.querySelectorAll(`a.btn-action`);
+
+    const makeActive = (link) => {
+      console.log(menuLinks)
+      const activeLink = menuLinks.filter( el => el.dataset.btnScroll === link);
+
+      console.log(activeLink.classList);
+
+      // menuLinks[link].classList.add(`header__item-link--active`)
+    };
+    const removeActive = (link) => menuLinks[link].classList.remove(`header__item-link--active`);
+    const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
+    const sectionMargin = 200;
+    let currentIndex = 0;
+
+    window.addEventListener(`scroll`, () => {
+      // const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1
+      const findSection = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1;
+      const currentSection = sections[findSection].dataset.content;
+
+      if (findSection !== currentIndex) {
+      //   console.log(current, currentActive)
+      //   removeAllActive();
+      //   currentActive = current;
+        makeActive(currentSection);
+      }
+    });
+  };
+  // spyScrolling();
 };
 
 export {goToBtn};

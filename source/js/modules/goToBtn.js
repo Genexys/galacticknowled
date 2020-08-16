@@ -29,32 +29,37 @@ const goToBtn = () => {
     const menuLinks = document.querySelectorAll(`a.btn-action`);
 
     const makeActive = (link) => {
-      console.log(menuLinks)
-      const activeLink = menuLinks.filter( el => el.dataset.btnScroll === link);
-
-      console.log(activeLink.classList);
-
-      // menuLinks[link].classList.add(`header__item-link--active`)
+      const activeLink = Array.from(menuLinks).filter((el) => el.dataset.btnScroll === link);
+      activeLink[0].classList.add(`header__item-link--active`)
     };
-    const removeActive = (link) => menuLinks[link].classList.remove(`header__item-link--active`);
+    const removeActive = (link) => {
+      menuLinks[link].classList.remove(`header__item-link--active`)
+    };
     const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
     const sectionMargin = 200;
-    let currentIndex = 0;
+    let currentIndex;
 
     window.addEventListener(`scroll`, () => {
       // const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1
       const findSection = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1;
-      const currentSection = sections[findSection].dataset.content;
 
-      if (findSection !== currentIndex) {
-      //   console.log(current, currentActive)
-      //   removeAllActive();
-      //   currentActive = current;
-        makeActive(currentSection);
+      if (!sections[findSection]) {
+        currentIndex = 99;
+        for (const linkItem of menuLinks) {
+          linkItem.classList.remove(`header__item-link--active`)
+        }
+      } else {
+        const currentSection = sections[findSection].dataset.content;
+
+        if (findSection !== currentIndex) {
+          removeAllActive();
+          currentIndex = findSection;
+          makeActive(currentSection);
+        }
       }
     });
   };
-  // spyScrolling();
+  spyScrolling();
 };
 
 export {goToBtn};
