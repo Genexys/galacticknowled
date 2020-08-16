@@ -60,6 +60,23 @@ const goToBtn = () => {
     });
   };
   spyScrolling();
+
+
+  const scrollToBtn = document.querySelector(`.scroll-to-btn`);
+
+  scrollToBtn.addEventListener(`click`, () => {
+    window.scroll({top: 0, left: 0, behavior: `smooth`});
+  });
+
+  window.addEventListener(`scroll`, () => {
+    if (window.scrollY > 400) {
+      scrollToBtn.classList.add(`scroll-to-btn__visible`);
+    } else {
+      scrollToBtn.classList.remove(`scroll-to-btn__visible`);
+    }
+  });
+
+
 };
 
 export {goToBtn};

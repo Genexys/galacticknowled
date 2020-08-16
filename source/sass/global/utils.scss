@@ -165,6 +165,25 @@ input[type="radio"].visually-hidden {
   }
 }
 
+.scroll-to-btn {
+  position: fixed;
+  right: 70px;
+  bottom: 20px;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s;
+
+  @media screen and (max-width: 1550px) {
+    right: 20px;
+  }
+
+  &__visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 @keyframes hue-rotate {
   from {
     filter: hue-rotate(0);
