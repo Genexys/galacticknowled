@@ -28,7 +28,7 @@
 
   &__inner {
     position: relative;
-    padding: 20px 50px 35px;
+    padding: 20px 50px 35px 0;
     overflow: hidden;
 
     &::after {
@@ -112,7 +112,7 @@
   z-index: 4;
   display: flex;
   justify-content: center;
-  padding-left: 114px;
+  padding-left: 163px;
 
   &__group {
     position: relative;
@@ -135,10 +135,17 @@
     background-color: rgba(238, 237, 237, 0.10);
     font-size: 14px;
     color: #ffffff;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, opacity 0.2s, border-color 0.2s;
 
     &::placeholder {
       color: #ffffff;
+    }
+
+    &:focus {
+      border-color: rgb(220, 190, 255);
+      background-color: rgba(255, 255, 255, 0.2);
+      //opacity: 0.2;
+      box-shadow: 0px 0px 21.84px 2.16px rgba(0, 0, 0, 0.004),inset 0px 0px 6.7px 3.3px rgba(6, 1, 10, 0.48);
     }
   }
 

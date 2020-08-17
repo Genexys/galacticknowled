@@ -22,6 +22,12 @@
     font-size: 18px;
     line-height: 25px;
 
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -36,13 +42,29 @@
   &__cell {
     width: 50%;
 
+    @media screen and (max-width: 960px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
     &:nth-of-type(1) {
       padding-right: 85px;
       text-align: right;
+
+      @media screen and (max-width: 960px) {
+        padding: 0;
+      }
     }
 
     &:nth-of-type(2) {
       padding-left: 85px;
+
+      @media screen and (max-width: 960px) {
+        padding: 0;
+      }
 
       .footer__descr {
         margin-right: auto;

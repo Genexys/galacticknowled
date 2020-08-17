@@ -147,6 +147,8 @@
   }
 
   &__text {
+    position: relative;
+    z-index: 5;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -173,5 +175,21 @@
       display: block;
       margin: 0 auto 12px;
     }
+  }
+}
+
+.btn-modal-youtube {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-youtube {
+  .modal__container {
+    padding: 0;
+  }
+
+  .modal__content {
+    margin: 0;
   }
 }

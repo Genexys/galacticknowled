@@ -9,6 +9,7 @@ import {phoneMask} from "./modules/phoneMask";
 import {validateMainForm} from "./modules/validateMainForm";
 import {reviews} from "./modules/reviews";
 import {goToBtn} from "./modules/goToBtn";
+import {modalYoutube} from "./modules/modalYoutube";
 
 // Utils
 // ---------------------------------
@@ -27,3 +28,4 @@ phoneMask();
 validateMainForm();
 reviews();
 goToBtn();
+modalYoutube();

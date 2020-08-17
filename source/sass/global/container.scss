@@ -9,12 +9,12 @@
   }
 
   @include viewport--md {
-    padding: 0 16px;
+    padding: 0 15px;
   }
 
-  @include viewport--sm {
-    padding: 0 8px;
-  }
+  //@include viewport--sm {
+  //  padding: 0 8px;
+  //}
 
   &--no-padding {
     @include viewport--sm {
