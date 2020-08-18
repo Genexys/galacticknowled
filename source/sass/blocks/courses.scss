@@ -13,6 +13,14 @@
     z-index: 2;
     margin: 0 0 55px;
     font-size: 30px;
+
+    @media screen and (max-width: 650px) {
+      max-width: 283px;
+      width: 100%;
+      margin: 0 auto 30px;
+      font-size: 26px;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -20,8 +28,7 @@
     grid-template-columns: repeat(var(--column-count-course), 1fr);
     grid-gap: 50px 30px;
     padding: 0;
-    margin: 0;
-    margin-bottom: 60px;
+    margin: 0 0 60px;
     list-style: none;
 
     @media screen and (max-width: 1024px) {
@@ -30,6 +37,7 @@
 
     @media screen and (max-width: 650px) {
       --column-count-course: 1;
+      grid-gap: 25px 30px;
     }
   }
 
@@ -48,6 +56,7 @@
 
     @media screen and (max-width: 650px) {
       margin: 0;
+      line-height: 40px;
     }
 
     span {
@@ -81,8 +90,11 @@
   margin-bottom: 30px;
 
   @media screen and (max-width: 650px) {
+    max-width: 256px;
     height: 280px;
-    margin-bottom: 14px;
+    width: 100%;
+    margin: 0 auto 14px;
+    border-radius: 18px;
   }
 
   &--one {
@@ -135,6 +147,11 @@
     background-color: #c323fe;
     transition: transform 0.3s ease;
     will-change: transform;
+    overflow: hidden;
+
+    @media screen and (max-width: 650px) {
+      border-radius: 18px;
+    }
 
     &::before {
       content: "";
@@ -170,6 +187,10 @@
 
   &__header {
     padding-bottom: 10px;
+
+    @media screen and (max-width: 650px) {
+      padding-bottom: 5px;
+    }
   }
 
   &__content {
@@ -193,6 +214,7 @@
 
     @media screen and (max-width: 650px) {
       font-size: 17px;
+      line-height: 1;
     }
 
     span {

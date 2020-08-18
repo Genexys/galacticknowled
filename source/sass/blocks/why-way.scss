@@ -3,6 +3,10 @@
   padding-top: 70px;
   padding-bottom: 30px;
 
+  @media screen and (max-width: 600px) {
+    margin-top: -80px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -36,6 +40,14 @@
     z-index: 2;
     margin: 0 0 55px;
     font-size: 30px;
+
+    @media screen and (max-width: 650px) {
+      max-width: 235px;
+      width: 100%;
+      margin: 0 auto 30px;
+      font-size: 26px;
+      text-align: center;
+    }
   }
 
   .comet {

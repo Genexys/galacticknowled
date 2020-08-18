@@ -42,6 +42,10 @@
     @media screen and (max-width: 600px) {
       font-size: 26px;
     }
+
+    @media screen and (max-width: 599px) {
+      display: none;
+    }
   }
 
   &__descr {
@@ -60,6 +64,24 @@
 
     @media screen and (max-width: 600px) {
       font-size: 20px;
+    }
+
+    @media screen and (max-width: 599px) {
+      display: none;
+    }
+
+    &--mob {
+      display: none;
+      max-width: 230px;
+      width: 100%;
+      margin: auto;
+
+      @media screen and (max-width: 599px) {
+        display: block;
+        font-weight: 500;
+        line-height: 1.3;
+        text-align: center;
+      }
     }
   }
 

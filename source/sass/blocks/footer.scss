@@ -48,6 +48,8 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      max-width: 265px;
+      width: 100%;
     }
 
     &:nth-of-type(1) {
@@ -72,6 +74,10 @@
         margin-bottom: 5px;
         text-align: left;
 
+        @media screen and (max-width: 960px) {
+          text-align: center;
+        }
+
         a {
           margin-bottom: 4px;
         }
@@ -79,6 +85,12 @@
         span {
           display: block;
           margin-bottom: 5px;
+        }
+      }
+
+      .footer__title {
+        @media screen and (max-width: 960px) {
+          display: none;
         }
       }
     }
@@ -89,12 +101,22 @@
     font-weight: 600;
     font-size: 30px;
     color: #cc9cff;
+
+    @media screen and (max-width: 960px) {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
   }
 
   &__descr {
     margin: 0 0 20px auto;
     max-width: 327px;
     text-align: right;
+
+    @media screen and (max-width: 960px) {
+      font-size: 16px;
+      text-align: center;
+    }
 
     a {
       display: block;
@@ -104,9 +126,24 @@
   &__contacts {
     margin-bottom: 20px;
 
-    span {
+    @media screen and (max-width: 960px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-contact {
       display: block;
       margin-bottom: 10px;
+
+      @media screen and (max-width: 960px) {
+        font-size: 16px;
+      }
+    }
+
+    a {
+      @media screen and (max-width: 960px) {
+        //font-size: 16px;
+      }
     }
   }
 
@@ -117,9 +154,12 @@
     list-style: none;
 
     li {
-
       &:not(:first-of-type) {
         margin-left: 30px;
+
+        @media screen and (max-width: 960px) {
+          margin-left: 20px;
+        }
       }
 
       a {
@@ -132,51 +172,23 @@
         background-size: contain;
         transition: box-shadow 0.3s;
 
+        @media screen and (max-width: 960px) {
+          width: 47px;
+          height: 47px;
+        }
+
         &:hover {
           box-shadow: 0 0 30px 7px rgba(#fff, 0.19);
         }
 
         svg {
           fill: #cc9cff;
-          //use {
-          //  fill: #cc9cff;
-          //}
 
+          @media screen and (max-width: 960px) {
+            width: 47px;
+            height: 47px;
+          }
         }
-
-        //&.instagram {
-        //  background-image: url('../img/content/socials/001-instagram.png');
-        //
-        //  &:hover {
-        //    background-image: url('../img/content/socials/001-instagram-light.png');
-        //  }
-        //}
-        //
-        //&.vkontakte {
-        //  background-image: url('../img/content/socials/004-vk-social-logotype.png');
-        //
-        //  &:hover {
-        //    background-image: url('../img/content/socials/004-vk-social-logotype-light.png');
-        //  }
-        //}
-        //
-        //&.whatsapp {
-        //  background-image: url('../img/content/socials/002-whatsapp.png');
-        //
-        //  &:hover {
-        //    background-image: url('../img/content/socials/002-whatsapp-light.png');
-        //  }
-        //}
-        //
-        //&.telegram {
-        //  background-image: url('../img/content/socials/003-telegram.png');
-        //
-        //  &:hover {
-        //    background-image: url('../img/content/socials/003-telegram-light.png');
-        //  }
-        //}
-
-
       }
     }
   }
@@ -185,6 +197,10 @@
     font-size: 20px;
     color: #ffffff;
     opacity: 0.5;
+
+    @media screen and (max-width: 960px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -201,6 +217,12 @@
     background-image: url('../img/content/002-email.png');
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  span {
+    @media screen and (max-width: 960px) {
+      display: none;
+    }
   }
 }
 

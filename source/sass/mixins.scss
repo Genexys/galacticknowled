@@ -60,6 +60,11 @@
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
 
+  @media screen and (max-width: 650px) {
+    padding: 2px 42px 4px;
+    font-size: 16px;
+  }
+
   &::after {
     content: "";
     position: absolute;

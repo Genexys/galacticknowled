@@ -2,6 +2,10 @@
   background-image: url(../img/bg/star-reviews-screen.png);
   background-position: 50% -78px;
 
+  @media screen and (max-width: 650px) {
+    margin: 0 -15px;
+  }
+
   &__title {
     position: relative;
     z-index: 2;
@@ -12,6 +16,10 @@
   &__container {
     max-width: 1200px;
     width: 100%;
+
+    @media screen and (max-width: 650px) {
+      padding: 0 20px;
+    }
   }
 
   &__slider {
