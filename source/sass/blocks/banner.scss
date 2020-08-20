@@ -6,6 +6,10 @@
   background-size: cover;
   background-position: -25px 8%;
 
+  @media screen and (max-width: 650px) {
+    padding-top: 170px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -118,13 +122,14 @@
     z-index: 1;
     width: 50%;
     height: 100%;
-    pointer-events: none;
+    //pointer-events: none;
 
     .small-planet {
       position: absolute;
       top: 44px;
       left: -40px;
       z-index: 2;
+      will-change: transform;
     }
 
     .rocket {
@@ -132,6 +137,7 @@
       top: 235px;
       right: 28%;
       z-index: 2;
+      will-change: transform;
 
       @media screen and (max-width: 1310px) {
         right: 10px;
@@ -147,6 +153,7 @@
       top: 170px;
       right: 0;
       z-index: 2;
+      will-change: transform;
     }
 
     .big-planet-light {

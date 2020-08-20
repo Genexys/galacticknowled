@@ -79,6 +79,7 @@
   .asteroid {
     position: absolute;
     top: 60px;
+    will-change: transform;
   }
 }
 

@@ -1644,6 +1644,9 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/bg/star-first-screen.png");
   background-size: cover;
   background-position: -25px 8%; }
+  @media screen and (max-width: 650px) {
+    .main-banner {
+      padding-top: 170px; } }
   .main-banner::before {
     content: "";
     position: absolute;
@@ -1777,18 +1780,19 @@ input[type="radio"].visually-hidden {
     right: 0;
     z-index: 1;
     width: 50%;
-    height: 100%;
-    pointer-events: none; }
+    height: 100%; }
     .main-banner__big-planet .small-planet {
       position: absolute;
       top: 44px;
       left: -40px;
-      z-index: 2; }
+      z-index: 2;
+      will-change: transform; }
     .main-banner__big-planet .rocket {
       position: absolute;
       top: 235px;
       right: 28%;
-      z-index: 2; }
+      z-index: 2;
+      will-change: transform; }
       @media screen and (max-width: 1310px) {
         .main-banner__big-planet .rocket {
           right: 10px; } }
@@ -1799,7 +1803,8 @@ input[type="radio"].visually-hidden {
       position: absolute;
       top: 170px;
       right: 0;
-      z-index: 2; }
+      z-index: 2;
+      will-change: transform; }
     .main-banner__big-planet .big-planet-light {
       position: absolute;
       z-index: 1;
@@ -1925,7 +1930,8 @@ input[type="radio"].visually-hidden {
         font-size: 16px; } }
   .courses .asteroid {
     position: absolute;
-    top: 60px; }
+    top: 60px;
+    will-change: transform; }
 
 .course-card {
   position: relative;
@@ -2177,7 +2183,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 30px; }
   @media screen and (max-width: 600px) {
     .why-way {
-      margin-top: -80px; } }
+      margin-top: -100px; } }
   .why-way::after {
     content: "";
     position: absolute;
@@ -2213,12 +2219,14 @@ input[type="radio"].visually-hidden {
         width: 100%;
         margin: 0 auto 30px;
         font-size: 26px;
+        line-height: 1.2;
         text-align: center; } }
   .why-way .comet {
     position: absolute;
     right: -400px;
     bottom: -79px;
-    z-index: 1; }
+    z-index: 1;
+    will-change: transform; }
 
 .why-list {
   position: relative;
@@ -2304,6 +2312,9 @@ input[type="radio"].visually-hidden {
   position: relative;
   padding-top: 40px;
   padding-bottom: 50px; }
+  @media screen and (max-width: 650px) {
+    .teachers {
+      padding-bottom: 0; } }
   .teachers::before {
     content: "";
     position: absolute;
@@ -2321,6 +2332,14 @@ input[type="radio"].visually-hidden {
     z-index: 2;
     margin: 0 0 55px;
     font-size: 30px; }
+    @media screen and (max-width: 650px) {
+      .teachers__title {
+        max-width: 235px;
+        width: 100%;
+        margin: 0 auto 30px;
+        font-size: 26px;
+        line-height: 1.2;
+        text-align: center; } }
   .teachers .green-planet {
     position: absolute;
     left: 0;
@@ -2347,6 +2366,9 @@ input[type="radio"].visually-hidden {
   background-color: #8e569b;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(42%, rgba(142, 86, 155, 0.5)), color-stop(105%, rgba(255, 255, 255, 0)));
   background: linear-gradient(to bottom, rgba(142, 86, 155, 0.5) 42%, rgba(255, 255, 255, 0) 105%); }
+  @media screen and (max-width: 650px) {
+    .teacher {
+      background: transparent; } }
   .teacher::before {
     content: "";
     position: absolute;
@@ -2358,6 +2380,9 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/bg/wave-person-card.png");
     background-repeat: no-repeat;
     background-position: 155px 0; }
+    @media screen and (max-width: 650px) {
+      .teacher::before {
+        display: none; } }
   .teacher::after {
     content: "";
     position: absolute;
@@ -2369,12 +2394,27 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/content/teachers/planet-teacher-1.png");
     background-repeat: no-repeat;
     background-position: 100% 0; }
+    @media screen and (max-width: 650px) {
+      .teacher::after {
+        display: none; } }
   .teacher__wrapper {
     position: relative;
     z-index: 5;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    @media screen and (max-width: 650px) {
+      .teacher__wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .teacher__img {
     position: relative;
     -ms-flex-negative: 0;
@@ -2415,17 +2455,29 @@ input[type="radio"].visually-hidden {
     @media screen and (max-width: 1100px) {
       .teacher__content {
         padding-left: 20px; } }
+    @media screen and (max-width: 650px) {
+      .teacher__content {
+        padding-left: 0;
+        text-align: center; } }
   .teacher__name {
     margin: 0 0 15px;
     font-weight: 600;
     font-size: 20px;
     line-height: 25px; }
+    @media screen and (max-width: 1050px) {
+      .teacher__name {
+        margin-bottom: 5px;
+        font-size: 16px; } }
   .teacher__about {
     margin: 0;
     padding: 0;
     font-size: 16px;
     line-height: 25px;
     list-style: none; }
+    @media screen and (max-width: 1050px) {
+      .teacher__about {
+        font-size: 12px;
+        line-height: 16px; } }
   .teacher__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2439,13 +2491,18 @@ input[type="radio"].visually-hidden {
     line-height: 20px;
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
+    @media screen and (max-width: 650px) {
+      .teacher__link {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
     .teacher__link:hover {
       opacity: 0.8; }
     .teacher__link img {
       display: block;
       margin-right: 10px; }
     .teacher__link span {
-      opacity: .46;
+      opacity: 0.46;
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
       -webkit-font-smoothing: antialiased; }

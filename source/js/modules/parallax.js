@@ -59,18 +59,15 @@ const parallax = () => {
     .setTween(tlWhy)
     .addTo(controller);
 
-  const parallaxPanets = function(e) {
-    let _w = window.innerWidth/2;
-    let _h = window.innerHeight/2;
+  const parallaxPanets = function (e) {
+    let _w = window.innerWidth / 2;
+    let _h = window.innerHeight / 2;
     let _mouseX = e.clientX;
     let _mouseY = e.clientY;
 
-    // console.log(_mouseY, _mouseY)
-
-    // rocket.style.transform = `translate(-${(_mouseY - _h) * 0.01}%, ${(_mouseX - _w) * 0.01}%)`;
-    TweenLite.to(rocket, 1, {transform: `translate(-${(_mouseY - _h) * 0.01}%, ${(_mouseX - _w) * 0.01}%)`, ease:Power2.easeOut});
-    // planets[0].style.transform = `translateY(-${(_mouseY - _h) * 0.02}%)`;
-    // planets[1].style.transform = `translateY(${(_mouseY - _h) * 0.008}%)`;
+    TweenLite.to(rocket, 1, {transform: `translate(-${(_mouseX - _w) * 0.015}%, -${(_mouseY - _h) * 0.025}%)`, ease:Power2.easeOut});
+    TweenLite.to(planets[0], 1, {transform: `translate(${(_mouseX - _w) * 0.015}%, -${(_mouseY - _h) * 0.025}%)`, ease:Power2.easeOut});
+    TweenLite.to(planets[1], 1, {transform: `translateY(${(_mouseY - _h) * 0.01}%)`, ease:Power2.easeOut});
   };
 
   window.addEventListener("mousemove", parallaxPanets);
