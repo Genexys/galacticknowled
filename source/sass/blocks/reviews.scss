@@ -11,6 +11,11 @@
     z-index: 2;
     margin: 0 0 20px;
     font-size: 30px;
+
+    @media screen and (max-width: 650px) {
+      font-size: 26px;
+      text-align: center;
+    }
   }
 
   &__container {

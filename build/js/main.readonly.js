@@ -9,6 +9,7 @@ import {phoneMask} from "./modules/phoneMask";
 import {validateMainForm} from "./modules/validateMainForm";
 import {reviews} from "./modules/reviews";
 import {goToBtn} from "./modules/goToBtn";
+import {modalYoutube} from "./modules/modalYoutube";
 
 // Utils
 // ---------------------------------
@@ -27,6 +28,7 @@ phoneMask();
 validateMainForm();
 reviews();
 goToBtn();
+modalYoutube();
 
 const ie11Download = (el) => {
   if (el.href === ``) {
@@ -346,35 +348,87 @@ const goToBtn = () => {
     const menuLinks = document.querySelectorAll(`a.btn-action`);
 
     const makeActive = (link) => {
-      console.log(menuLinks)
-      const activeLink = menuLinks.filter( el => el.dataset.btnScroll === link);
-
-      console.log(activeLink.classList);
-
-      // menuLinks[link].classList.add(`header__item-link--active`)
+      const activeLink = Array.from(menuLinks).filter((el) => el.dataset.btnScroll === link);
+      activeLink[0].classList.add(`header__item-link--active`)
     };
-    const removeActive = (link) => menuLinks[link].classList.remove(`header__item-link--active`);
+    const removeActive = (link) => {
+      menuLinks[link].classList.remove(`header__item-link--active`)
+    };
     const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
     const sectionMargin = 200;
-    let currentIndex = 0;
+    let currentIndex;
 
     window.addEventListener(`scroll`, () => {
       // const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1
       const findSection = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1;
-      const currentSection = sections[findSection].dataset.content;
 
-      if (findSection !== currentIndex) {
-      //   console.log(current, currentActive)
-      //   removeAllActive();
-      //   currentActive = current;
-        makeActive(currentSection);
+      if (!sections[findSection]) {
+        currentIndex = 99;
+        for (const linkItem of menuLinks) {
+          linkItem.classList.remove(`header__item-link--active`)
+        }
+      } else {
+        const currentSection = sections[findSection].dataset.content;
+
+        if (findSection !== currentIndex) {
+          removeAllActive();
+          currentIndex = findSection;
+          makeActive(currentSection);
+        }
       }
     });
   };
-  // spyScrolling();
+  spyScrolling();
+
+
+  const scrollToBtn = document.querySelector(`.scroll-to-btn`);
+
+  scrollToBtn.addEventListener(`click`, () => {
+    window.scroll({top: 0, left: 0, behavior: `smooth`});
+  });
+
+  window.addEventListener(`scroll`, () => {
+    if (window.scrollY > 400) {
+      scrollToBtn.classList.add(`scroll-to-btn__visible`);
+    } else {
+      scrollToBtn.classList.remove(`scroll-to-btn__visible`);
+    }
+  });
+
+
 };
 
 export {goToBtn};
+
+import MicroModal from 'micromodal';
+
+const modalYoutube = () => {
+  const btnModals = document.querySelectorAll(`.btn-modal-youtube`);
+
+  for (const el of btnModals) {
+    el.addEventListener(`click`, () => {
+      MicroModal.show(`${el.dataset.micromodalTrigger}`, {
+        onShow: modal => {
+          modal.querySelector('iframe').setAttribute('src', `${el.dataset.videoSrc}`);
+        },
+        onClose: modal => {
+          modal.querySelector('iframe').setAttribute('src', modal.querySelector('iframe').getAttribute('src'));
+        },
+      });
+    });
+  }
+
+  // MicroModal.init({
+  //   onShow: modal => {
+  //
+  //   },
+  //   onClose: modal => {
+  //     modal.querySelector('iframe').setAttribute('src', modal.querySelector('iframe').getAttribute('src'));
+  //   },
+  // });
+};
+
+export {modalYoutube};
 
 const parallax = () => {
   const controller = new ScrollMagic.Controller();

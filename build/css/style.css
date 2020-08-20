@@ -2456,6 +2456,9 @@ input[type="radio"].visually-hidden {
   padding-bottom: 75px;
   background-image: url("../img/bg/star-five-screen.png");
   background-position: 50% -78px; }
+  @media screen and (max-width: 650px) {
+    .form-block {
+      padding-bottom: 35px; } }
   .form-block__wrapper {
     position: relative;
     border-radius: 20px;
@@ -2464,7 +2467,9 @@ input[type="radio"].visually-hidden {
     background-color: rgba(40, 144, 136, 0.3); }
     @media screen and (max-width: 1023px) {
       .form-block__wrapper {
-        margin: 0 -15px;
+        max-width: 310px;
+        width: 100%;
+        margin: 0 auto;
         -webkit-box-shadow: none;
                 box-shadow: none;
         border-radius: 0;
@@ -2566,11 +2571,25 @@ input[type="radio"].visually-hidden {
     top: -49px;
     left: -62px;
     z-index: 3; }
+    @media screen and (max-width: 1023px) {
+      .form-block .form-planet {
+        top: 77px;
+        left: auto;
+        z-index: 3;
+        right: 21px;
+        width: 69px; } }
   .form-block .form-planet-mini {
     position: absolute;
     bottom: 24px;
     left: 164px;
     z-index: 4; }
+    @media screen and (max-width: 1023px) {
+      .form-block .form-planet-mini {
+        top: 138px;
+        left: 24px;
+        bottom: auto;
+        z-index: 4;
+        width: 26px; } }
   .form-block .gradient {
     position: absolute;
     top: -84px;
@@ -2615,6 +2634,7 @@ input[type="radio"].visually-hidden {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
+      width: 100%;
       padding: 0; } }
   .main-form__group {
     position: relative;
@@ -2754,6 +2774,10 @@ input[type="radio"].visually-hidden {
     z-index: 2;
     margin: 0 0 20px;
     font-size: 30px; }
+    @media screen and (max-width: 650px) {
+      .reviews__title {
+        font-size: 26px;
+        text-align: center; } }
   .reviews__container {
     max-width: 1200px;
     width: 100%; }
@@ -2963,7 +2987,11 @@ input[type="radio"].visually-hidden {
       width: 1px;
       height: 250px;
       background-color: rgba(255, 255, 255, 0.2); }
+      @media screen and (max-width: 960px) {
+        .footer__container::before {
+          display: none; } }
   .footer__cell {
+    position: relative;
     width: 50%; }
     @media screen and (max-width: 960px) {
       .footer__cell {
@@ -2988,8 +3016,17 @@ input[type="radio"].visually-hidden {
       text-align: right; }
       @media screen and (max-width: 960px) {
         .footer__cell:nth-of-type(1) {
-          margin-bottom: 30px;
-          padding: 0; } }
+          padding: 0 0 30px; } }
+      .footer__cell:nth-of-type(1)::after {
+        content: "";
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        height: 1px;
+        width: 200px;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.2); }
       .footer__cell:nth-of-type(1) .footer__descr {
         margin-bottom: 9px; }
     .footer__cell:nth-of-type(2) {

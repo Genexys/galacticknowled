@@ -7,6 +7,10 @@
   //background-repeat: no-repeat;
   background-position: 50% -78px;
 
+  @media screen and (max-width: 650px) {
+    padding-bottom: 35px;
+  }
+
   &__wrapper {
     position: relative;
     border-radius: 20px;
@@ -14,7 +18,9 @@
     background-color: rgba(40, 144, 136, 0.3);
 
     @media screen and (max-width: 1023px) {
-      margin: 0 -15px;
+      max-width: 310px;
+      width: 100%;
+      margin: 0 auto;
       box-shadow: none;
       border-radius: 0;
       background-color: transparent;
@@ -129,6 +135,14 @@
     top: -49px;
     left: -62px;
     z-index: 3;
+
+    @media screen and (max-width: 1023px) {
+      top: 77px;
+      left: auto;
+      z-index: 3;
+      right: 21px;
+      width: 69px;
+    }
   }
 
   .form-planet-mini {
@@ -136,6 +150,14 @@
     bottom: 24px;
     left: 164px;
     z-index: 4;
+
+    @media screen and (max-width: 1023px) {
+      top: 138px;
+      left: 24px;
+      bottom: auto;
+      z-index: 4;
+      width: 26px;
+    }
   }
 
   .gradient {
@@ -145,7 +167,7 @@
     z-index: 2;
     height: 140%;
     width: 39%;
-    background: radial-gradient(circle, #8325ab -14%, rgba(255, 255, 255,0) 85%);
+    background: radial-gradient(circle, #8325ab -14%, rgba(255, 255, 255, 0) 85%);
 
     @media screen and (max-width: 1023px) {
       display: none;
@@ -175,6 +197,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     padding: 0;
   }
 
@@ -240,7 +263,7 @@
       border-color: rgb(220, 190, 255);
       background-color: rgba(255, 255, 255, 0.2);
       //opacity: 0.2;
-      box-shadow: 0 0 21.84px 2.16px rgba(0, 0, 0, 0.004),inset 0 0 6.7px 3.3px rgba(6, 1, 10, 0.48);
+      box-shadow: 0 0 21.84px 2.16px rgba(0, 0, 0, 0.004), inset 0 0 6.7px 3.3px rgba(6, 1, 10, 0.48);
     }
   }
 
