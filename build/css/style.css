@@ -3248,3 +3248,21 @@ input[type="radio"].visually-hidden {
   bottom: 0;
   z-index: 1;
   pointer-events: none; }
+
+.thnx-modal .modal__container {
+  padding: 30px 40px;
+  max-width: 480px;
+  border-radius: 10px;
+  background-color: #8e569b; }
+
+.thnx-modal__text {
+  color: #ffffff; }
+  .thnx-modal__text span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 45px; }
+
+.thnx-modal__img {
+  position: absolute;
+  right: 0;
+  bottom: 0; }

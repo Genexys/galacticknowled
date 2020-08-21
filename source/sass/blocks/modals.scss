@@ -1,0 +1,24 @@
+.thnx-modal {
+  .modal__container {
+    padding: 30px 40px;
+    max-width: 480px;
+    border-radius: 10px;
+    background-color: #8e569b;
+  }
+
+  &__text {
+    color: #ffffff;
+
+    span {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 45px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
