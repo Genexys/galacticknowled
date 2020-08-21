@@ -46,7 +46,8 @@
       position: absolute;
       width: 22px;
       height: 3px;
-      background: #c5a4e9;
+      background-color: #855eae;
+      transition: background-color 0.3s;
     }
 
     &::before {
@@ -70,6 +71,14 @@
 
     &--next {
       right: -27px;
+    }
+
+    &:hover {
+
+      &::before,
+      &::after {
+        background-color: #c5a4e9;
+      }
     }
   }
 
@@ -124,11 +133,6 @@
     line-height: 20px;
     text-align: center;
     transition: box-shadow 0.3s;
-
-    //&:hover {
-    //  z-index: 2;
-    //  box-shadow: 0 0 60px #000000;
-    //}
 
     &::before {
       content: "";
