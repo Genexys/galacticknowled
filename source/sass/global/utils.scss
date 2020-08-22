@@ -165,7 +165,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
-.scroll-to-btn {
+.scroll-up-btn {
   position: fixed;
   right: 70px;
   bottom: 20px;
@@ -176,6 +176,10 @@ input[type="radio"].visually-hidden {
 
   @media screen and (max-width: 1550px) {
     right: 20px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    width: 29px;
   }
 
   &__visible {

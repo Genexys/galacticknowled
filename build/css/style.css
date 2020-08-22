@@ -1401,7 +1401,7 @@ input[type="radio"].visually-hidden {
       -webkit-transition: background 0.1s ease-out;
       transition: background 0.1s ease-out; }
 
-.scroll-to-btn {
+.scroll-up-btn {
   position: fixed;
   right: 70px;
   bottom: 20px;
@@ -1411,9 +1411,12 @@ input[type="radio"].visually-hidden {
   -webkit-transition: opacity 0.5s, visibility 0.5s;
   transition: opacity 0.5s, visibility 0.5s; }
   @media screen and (max-width: 1550px) {
-    .scroll-to-btn {
+    .scroll-up-btn {
       right: 20px; } }
-  .scroll-to-btn__visible {
+  @media screen and (max-width: 1023px) {
+    .scroll-up-btn {
+      width: 29px; } }
+  .scroll-up-btn__visible {
     opacity: 1;
     visibility: visible;
     -webkit-transition: opacity 0.5s, visibility 0.5s;
@@ -3338,7 +3341,13 @@ input[type="radio"].visually-hidden {
   padding: 30px 40px;
   max-width: 480px;
   border-radius: 10px;
-  background-color: #8e569b; }
+  background-color: #8e569b;
+  background-image: url("../img/content/popup-bg.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%; }
+  @media screen and (max-width: 440px) {
+    .thnx-modal .modal__container {
+      background-size: 170px; } }
 
 .thnx-modal__text {
   color: #ffffff; }
@@ -3346,8 +3355,3 @@ input[type="radio"].visually-hidden {
     font-weight: 600;
     font-size: 18px;
     line-height: 45px; }
-
-.thnx-modal__img {
-  position: absolute;
-  right: 0;
-  bottom: 0; }
