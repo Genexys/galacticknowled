@@ -11,6 +11,7 @@ import {reviews} from "./modules/reviews";
 import {goToBtn} from "./modules/goToBtn";
 import {modalYoutube} from "./modules/modalYoutube";
 import {mobileMenu} from "./modules/mobileMenu";
+import {accordion} from "./modules/accordion";
 
 // Utils
 // ---------------------------------
@@ -31,3 +32,4 @@ reviews();
 goToBtn();
 modalYoutube();
 mobileMenu();
+accordion();

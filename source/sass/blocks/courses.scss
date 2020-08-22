@@ -7,6 +7,10 @@
     padding-top: 30px;
   }
 
+  &--single {
+    padding-top: 147px;
+  }
+
   &__title {
     position: relative;
     z-index: 2;
@@ -38,6 +42,94 @@
       --column-count-course: 1;
       grid-gap: 25px 30px;
     }
+
+    &--single {
+
+      .course-card--one {
+        .course-card__wrapper,
+        .course-card__shadow {
+          background-image: linear-gradient(120deg, rgb(85,169,241) 0%, rgb(90,110,198) 58%, rgb(17,83,252) 100%);
+        }
+
+        .course-card__wrapper {
+          &::before {
+            background-image: url('../img/content/single-course-1.png');
+          }
+        }
+      }
+
+      .course-card--two {
+        .course-card__wrapper,
+        .course-card__shadow {
+          background-image: linear-gradient(120deg, rgb(50,211,198) 0%, rgb(50,190,211) 44%, rgb(4,158,115) 100%);
+        }
+
+        .course-card__wrapper {
+          &::before {
+            background-image: url('../img/content/single-course-2.png');
+          }
+        }
+      }
+
+      .course-card--three {
+        .course-card__wrapper,
+        .course-card__shadow {
+          background-image: linear-gradient(-45deg, rgb(114,29,229) 0%, rgb(161,29,229) 45%, rgb(136,178,247) 100%);
+        }
+
+        .course-card__wrapper {
+          &::before {
+            background-image: url('../img/content/single-course-3.png');
+          }
+        }
+      }
+
+      .course-card {
+        &:hover {
+          .course-card__wrapper {
+            box-shadow: 0 0 11px 0 rgba(46, 224, 205, 03);
+            border-color: rgb(100, 251, 253);
+          }
+        }
+      }
+
+      .course-card__wrapper {
+        border: 1px solid transparent;
+        transition: transform 0.3s, border-color .5s, box-shadow 0.5s;
+      }
+
+      .course-card__title {
+        font-size: 21px;
+      }
+
+      .course-card__content {
+        padding: 17px 13px 25px 26px;
+      }
+
+      .course-card__main {
+        align-items: flex-start;
+        padding-top: 20px;
+      }
+
+      .course-card__footer {
+        display: flex;
+        align-items: center;
+        padding-left: 3px;
+        opacity: 1;
+
+        p {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1.25;
+          text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          color: $color-yellow;
+        }
+      }
+
+      .courses__button {
+        padding: 7px 59px 9px;
+      }
+    }
   }
 
   &__bottom {
@@ -52,6 +144,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 45px;
+    text-shadow: 0 1px 4.25px rgba(70, 31, 74, 0.3);
 
     @media screen and (max-width: 650px) {
       margin: 0;
@@ -98,7 +191,6 @@
   }
 
   &--one {
-
     .course-card__wrapper {
       background-image: linear-gradient(122deg, rgb(252,105,176) 0%, rgb(222, 67, 224) 18%, rgb(195, 35, 254) 49%, rgb(155, 81, 255) 77%, rgb(119, 100, 255) 100%);
 
@@ -194,6 +286,8 @@
   }
 
   &__content {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -210,7 +304,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 21px;
-    text-shadow: 1px 1px 7px #000;
+    text-shadow: 0 1px 4.25px rgba(70, 31, 74, 0.3);
 
     @media screen and (max-width: 650px) {
       font-size: 17px;
@@ -237,7 +331,7 @@
     flex: 1;
     display: flex;
     align-items: center;
-    //padding-top: 55px;
+    padding-top: 15px;
     //padding-bottom: 45px;
     font-weight: 500;
     font-size: 18px;
@@ -250,6 +344,30 @@
 
     p {
       margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      font-size: 15px;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: 9px;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -1px;
+          content: "-";
+        }
+
+        &:not(:last-of-type) {
+          padding-bottom: 12px;
+        }
+      }
     }
   }
 
@@ -268,6 +386,18 @@
     p {
       margin: 0;
     }
+  }
+
+  &__sale {
+    display: flex;
+    height: 26px;
+    padding: 3px 13px 1px;
+    margin-left: 8px;
+    border-radius: 13px;
+    background-color: rgb(243, 41, 112);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
   }
 }
 

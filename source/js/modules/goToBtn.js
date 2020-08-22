@@ -14,7 +14,6 @@ const goToBtn = () => {
 
         item.addEventListener(`click`, function (e) {
           if (tabId === contentId) {
-            e.preventDefault();
             window.scroll({top: findPos(content) - 100, left: 0, behavior: `smooth`});
           }
         });

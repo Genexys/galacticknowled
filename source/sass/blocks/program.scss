@@ -1,0 +1,52 @@
+.program {
+  &__title {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 55px;
+    font-size: 30px;
+
+    @media screen and (max-width: 650px) {
+      max-width: 283px;
+      width: 100%;
+      margin: 0 auto 30px;
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+}
+
+.accordion {
+
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 23px 27px;
+    border-radius: 10px;
+    background-color: rgba(#8e569b, 0.5);
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    text-align: left;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height .3s;
+  }
+}
