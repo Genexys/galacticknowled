@@ -6,6 +6,7 @@ const parallax = () => {
   const why = document.querySelector(`.why-way`);
   const planets = banner.querySelectorAll(`.animate-planet`);
   const rocket = banner.querySelector(`.rocket`);
+  const bannerStars = banner.querySelector(`.main-banner__parallax-star`);
   const asteroid = document.querySelector(`.asteroid`);
   const comet = document.querySelector(`.comet`);
   const tlBanner = new TimelineMax();
@@ -68,6 +69,7 @@ const parallax = () => {
     TweenLite.to(rocket, 1, {transform: `translate(-${(_mouseX - _w) * 0.015}%, -${(_mouseY - _h) * 0.025}%)`, ease:Power2.easeOut});
     TweenLite.to(planets[0], 1, {transform: `translate(${(_mouseX - _w) * 0.015}%, -${(_mouseY - _h) * 0.025}%)`, ease:Power2.easeOut});
     TweenLite.to(planets[1], 1, {transform: `translateY(${(_mouseY - _h) * 0.01}%)`, ease:Power2.easeOut});
+    TweenLite.to(bannerStars, 1, {transform: `translateX(${(_mouseX - _w) * 0.003}%)`, ease:Power2.easeOut});
   };
 
   window.addEventListener("mousemove", parallaxPanets);

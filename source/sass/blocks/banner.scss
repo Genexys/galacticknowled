@@ -2,9 +2,7 @@
   position: relative;
   padding-top: 180px;
   padding-bottom: 20px;
-  background-image: url('../img/bg/star-first-screen.png');
-  background-size: cover;
-  background-position: -25px 8%;
+  overflow: hidden;
 
   @media screen and (max-width: 650px) {
     padding-top: 170px;
@@ -22,6 +20,17 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     //opacity: 0.2;
+  }
+
+  &__parallax-star {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('../img/bg/star-first-screen.png');
+    background-size: cover;
+    background-position: -25px 8%;
   }
 
   &__content {
