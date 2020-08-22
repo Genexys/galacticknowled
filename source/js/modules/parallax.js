@@ -72,7 +72,9 @@ const parallax = () => {
     TweenLite.to(bannerStars, 1, {transform: `translateX(${(_mouseX - _w) * 0.003}%)`, ease:Power2.easeOut});
   };
 
-  window.addEventListener("mousemove", parallaxPanets);
+  if (window.innerWidth > 1024) {
+    window.addEventListener(`mousemove`, parallaxPanets);
+  }
 
 };
 

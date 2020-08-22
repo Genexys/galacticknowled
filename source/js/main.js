@@ -10,6 +10,7 @@ import {validateMainForm} from "./modules/validateMainForm";
 import {reviews} from "./modules/reviews";
 import {goToBtn} from "./modules/goToBtn";
 import {modalYoutube} from "./modules/modalYoutube";
+import {mobileMenu} from "./modules/mobileMenu";
 
 // Utils
 // ---------------------------------
@@ -29,3 +30,4 @@ validateMainForm();
 reviews();
 goToBtn();
 modalYoutube();
+mobileMenu();
