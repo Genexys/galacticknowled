@@ -3,12 +3,16 @@
   padding-top: 185px;
   background-image: url('../img/bg/star-second-screen.png');
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 650px) {
     padding-top: 30px;
   }
 
   &--single {
     padding-top: 147px;
+
+    @media screen and (max-width: 650px) {
+      padding-top: 182px;
+    }
   }
 
   &__title {
@@ -85,6 +89,12 @@
       }
 
       .course-card {
+
+        @media screen and (max-width: 650px) {
+          height: 300px;
+          margin-bottom: 23px;
+        }
+
         &:hover {
           .course-card__wrapper {
             box-shadow: 0 0 11px 0 rgba(46, 224, 205, 03);
@@ -100,15 +110,27 @@
 
       .course-card__title {
         font-size: 21px;
+
+        @media screen and (max-width: 650px) {
+          font-size: 17px;
+        }
       }
 
       .course-card__content {
         padding: 17px 13px 25px 26px;
+
+        @media screen and (max-width: 650px) {
+          padding: 22px 8px 12px 9px;
+        }
       }
 
       .course-card__main {
         align-items: flex-start;
         padding-top: 20px;
+
+        @media screen and (max-width: 650px) {
+          padding-top: 25px;
+        }
       }
 
       .course-card__footer {
@@ -123,11 +145,19 @@
           line-height: 1.25;
           text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
           color: $color-yellow;
+
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
         }
       }
 
       .courses__button {
         padding: 7px 59px 9px;
+
+        @media screen and (max-width: 650px) {
+          padding: 2px 52px 5px;
+        }
       }
     }
   }
@@ -353,6 +383,10 @@
       font-size: 15px;
       list-style: none;
 
+      @media screen and (max-width: 650px) {
+        font-size: 14px;
+      }
+
       li {
         position: relative;
         padding-left: 9px;
@@ -366,6 +400,10 @@
 
         &:not(:last-of-type) {
           padding-bottom: 12px;
+
+          @media screen and (max-width: 650px) {
+            padding-bottom: 1px;
+          }
         }
       }
     }
@@ -398,6 +436,13 @@
     font-weight: 600;
     font-size: 12px;
     line-height: 20px;
+
+    @media screen and (max-width: 768px) {
+      height: auto;
+      margin-left: 5px;
+      padding: 2px 11px 1px;
+      font-size: 10px;
+    }
   }
 }
 
