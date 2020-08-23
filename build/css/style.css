@@ -2719,6 +2719,22 @@ input[type="radio"].visually-hidden {
   @media screen and (max-width: 650px) {
     .form-block {
       padding-bottom: 35px; } }
+  .form-block--course::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 11% 10px, #dc17ff 31%, rgba(255, 255, 255, 0) 60%);
+    opacity: 0.43; }
+    @media screen and (max-width: 900px) {
+      .form-block--course::before {
+        display: block; } }
+  .form-block--course .form-block__wrapper {
+    z-index: 2; }
   .form-block__wrapper {
     position: relative;
     border-radius: 20px;
@@ -2856,9 +2872,9 @@ input[type="radio"].visually-hidden {
     top: -84px;
     left: -178px;
     z-index: 2;
-    height: 140%;
-    width: 39%;
-    background: radial-gradient(circle, #8325ab -14%, rgba(255, 255, 255, 0) 85%); }
+    height: 135%;
+    width: 67%;
+    background: radial-gradient(circle at 17%, #8325ab -34%, rgba(255, 255, 255, 0) 85%); }
     @media screen and (max-width: 1023px) {
       .form-block .gradient {
         display: none; } }
@@ -3066,14 +3082,12 @@ input[type="radio"].visually-hidden {
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
       top: 11px;
-      right: 0;
-      border-top-right-radius: 2px; }
+      right: 0; }
     .reviews__button::after {
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
       top: 26px;
-      right: 0;
-      border-bottom-right-radius: 2px; }
+      right: 0; }
     .reviews__button--prev {
       left: -28px;
       -webkit-transform: scale(-1, 1);
@@ -3135,7 +3149,7 @@ input[type="radio"].visually-hidden {
     max-height: 400px;
     padding: 0 10px;
     border-radius: 20px;
-    background-color: rgba(146, 113, 192, 0.8);
+    background-color: rgba(146, 113, 192, 0.9);
     font-size: 14px;
     line-height: 20px;
     text-align: center;

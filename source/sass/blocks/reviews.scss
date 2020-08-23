@@ -54,14 +54,12 @@
       transform: rotate(45deg);
       top: 11px;
       right: 0;
-      border-top-right-radius: 2px;
     }
 
     &::after {
       transform: rotate(-45deg);
       top: 26px;
       right: 0;
-      border-bottom-right-radius: 2px;
     }
 
     &--prev {
@@ -128,7 +126,7 @@
     max-height: 400px;
     padding: 0 10px;
     border-radius: 20px;
-    background-color: rgba(#9271c0, 0.8);
+    background-color: rgba(#9271c0, 0.9);
     font-size: 14px;
     line-height: 20px;
     text-align: center;
