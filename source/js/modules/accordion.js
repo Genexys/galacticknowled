@@ -9,43 +9,15 @@ const accordion = () => {
 
       block.classList.add(`accordion--js`);
       const t = function (n) {
-        let i, r = !1, o = 100;
-        function s() {
-          if (new Date - i < o) {
-            setTimeout(s, o);
-
-          } else {
-            r = !1;
-            const e = n.target.parentElement.querySelector(`.accordion__wrapper`);
-            const t = e.scrollHeight + `px`;
-            const button = n.target;
-            e.classList.toggle(`open`);
-
-            if (!e.classList.contains(`open`)) {
-              e.setAttribute(`aria-hidden`, `false`);
-              button.setAttribute(`aria-expanded`, `false`);
-            } else {
-              e.setAttribute(`aria-hidden`, `true`);
-              button.setAttribute(`aria-expanded`, `true`);
-            }
-
-            e.style.height = 0 === e.offsetHeight ? 0 : t;
-          }
-        }
-
-        window.addEventListener(`resize`, function () {
-          i = new Date;
-          !1 === r && (r = !0, setTimeout(s, o));
-        }, !1);
-
-        const e = n.target.parentElement.querySelector(`.accordion__wrapper`);
+        const e = this.parentElement.querySelector(`.accordion__wrapper`);
         const t = e.scrollHeight + `px`;
-        const button = n.target;
+        const button = this;
         e.classList.toggle(`open`);
+        button.classList.toggle(`open`);
 
         if (!e.classList.contains(`open`)) {
           e.setAttribute(`aria-hidden`, `false`);
-          console.log(button)
+
           button.setAttribute(`aria-expanded`, `false`);
         } else {
           e.setAttribute(`aria-hidden`, `true`);
@@ -56,8 +28,8 @@ const accordion = () => {
       };
       const n = block.querySelectorAll(`.accordion__title`);
 
-      n.forEach(function (e) {
-        e.addEventListener(`click`, t);
+      n.forEach(function (el) {
+        el.addEventListener(`click`, t);
       });
     }
   }
