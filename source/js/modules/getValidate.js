@@ -67,16 +67,24 @@ export const validateForm = function (form, config, closeModal = false) {
     }
 
     function showSuccess() {
-      const data = new FormData(form);
+      const formData = new FormData(form);
+      const searchParams = new URLSearchParams();
+
+      for (const pair of formData) {
+        searchParams.append(pair[0], pair[1]);
+      }
 
       fetch(form.getAttribute(`action`), {
         method: form.getAttribute(`method`),
-        body: data,
+        body: searchParams,
       })
-        .then(response => {
+        .then((response) => {
           return response.text();
         })
-        .then(text => {
+        .then((response) => {
+          return response;
+        })
+        .then(() => {
           form.reset();
 
           MicroModal.show(`tnx-modal`);

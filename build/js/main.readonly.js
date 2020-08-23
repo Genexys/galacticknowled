@@ -10,25 +10,34 @@ import {validateMainForm} from "./modules/validateMainForm";
 import {reviews} from "./modules/reviews";
 import {goToBtn} from "./modules/goToBtn";
 import {modalYoutube} from "./modules/modalYoutube";
+import {mobileMenu} from "./modules/mobileMenu";
+import {accordion} from "./modules/accordion";
 
-// Utils
+document.addEventListener(`DOMContentLoaded`, ()=> {
+  // Utils
 // ---------------------------------
 // kick off the polyfill!
-smoothscroll.polyfill();
-forEachPolyfill();
-initIe11Download();
+  smoothscroll.polyfill();
+  forEachPolyfill();
+  initIe11Download();
 
 
 // Modules
 // ---------------------------------
-fixHeader();
-animateBtn();
-parallax();
-phoneMask();
-validateMainForm();
-reviews();
-goToBtn();
-modalYoutube();
+
+  fixHeader();
+  animateBtn();
+  parallax();
+  phoneMask();
+  validateMainForm();
+  reviews();
+  goToBtn();
+  modalYoutube();
+  mobileMenu();
+  accordion();
+
+
+});
 
 const ie11Download = (el) => {
   if (el.href === ``) {
@@ -116,6 +125,45 @@ const enableScrolling = () =>{
 
 export {enableScrolling, disableScrolling};
 
+const accordion = () => {
+  const quBlock = document.querySelector(`.accordion`);
+
+  if (quBlock) {
+
+    const blocksServices = quBlock.querySelectorAll(`.accordion__item`);
+
+    for (const block of blocksServices) {
+
+      block.classList.add(`accordion--js`);
+      const t = function (n) {
+        const e = this.parentElement.querySelector(`.accordion__wrapper`);
+        const t = e.scrollHeight + `px`;
+        const button = this;
+        e.classList.toggle(`open`);
+        button.classList.toggle(`open`);
+
+        if (!e.classList.contains(`open`)) {
+          e.setAttribute(`aria-hidden`, `false`);
+
+          button.setAttribute(`aria-expanded`, `false`);
+        } else {
+          e.setAttribute(`aria-hidden`, `true`);
+          button.setAttribute(`aria-expanded`, `true`);
+        }
+
+        e.style.height = 0 === e.offsetHeight ? t : 0;
+      };
+      const n = block.querySelectorAll(`.accordion__title`);
+
+      n.forEach(function (el) {
+        el.addEventListener(`click`, t);
+      });
+    }
+  }
+};
+
+export {accordion};
+
 const animateBtn = () => {
   const btnItems = document.querySelectorAll(`.animate-btn`);
 
@@ -128,13 +176,13 @@ const animateBtn = () => {
 
     const btTl = new TimelineLite({ paused: true });
 
-    tl.to(circlesTopLeft, 1.2, { x: -25, y: -25, scaleY: 2, ease: SlowMo.ease.config(0.1, 0.7, false) });
-    tl.to(circlesTopLeft[0], 0.1, { scale: 0.2, x: '+=6', y: '-=2' });
-    tl.to(circlesTopLeft[1], 0.1, { scaleX: 1, scaleY: 0.8, x: '-=10', y: '-=7' }, '-=0.1');
-    tl.to(circlesTopLeft[2], 0.1, { scale: 0.2, x: '-=15', y: '+=6' }, '-=0.1');
-    tl.to(circlesTopLeft[0], 1, { scale: 0, x: '-=5', y: '-=15', opacity: 0 });
-    tl.to(circlesTopLeft[1], 1, { scaleX: 0.4, scaleY: 0.4, x: '-=10', y: '-=10', opacity: 0 }, '-=1');
-    tl.to(circlesTopLeft[2], 1, { scale: 0, x: '-=15', y: '+=5', opacity: 0 }, '-=1');
+    tl.to(circlesTopLeft, 1.2, {x: -25, y: -25, scaleY: 2, ease: SlowMo.ease.config(0.1, 0.7, false)});
+    tl.to(circlesTopLeft[0], 0.1, {scale: 0.2, x: '+=6', y: '-=2'});
+    tl.to(circlesTopLeft[1], 0.1, {scaleX: 1, scaleY: 0.8, x: '-=10', y: '-=7' }, '-=0.1');
+    tl.to(circlesTopLeft[2], 0.1, {scale: 0.2, x: '-=15', y: '+=6' }, '-=0.1');
+    tl.to(circlesTopLeft[0], 1, {scale: 0, x: '-=5', y: '-=15', opacity: 0 });
+    tl.to(circlesTopLeft[1], 1, {scaleX: 0.4, scaleY: 0.4, x: '-=10', y: '-=10', opacity: 0 }, '-=1');
+    tl.to(circlesTopLeft[2], 1, {scale: 0, x: '-=15', y: '+=5', opacity: 0 }, '-=1');
 
     const tlBt1 = new TimelineLite();
     const tlBt2 = new TimelineLite();
@@ -155,9 +203,9 @@ const animateBtn = () => {
     tlBt2.add(tl2);
 
     btTl.add(tlBt1);
-    btTl.to(btnItem.querySelector('.button.effect-button'), 0.8, { scaleY: 1.1 }, 0.1);
+    btTl.to(btnItem.querySelector(`.button.effect-button`), 0.8, {scaleY: 1.1}, 0.1);
     btTl.add(tlBt2, 0.2);
-    btTl.to(btnItem.querySelector('.button.effect-button'), 1.8, { scale: 1, ease: Elastic.easeOut.config(1.2, 0.4) }, 1.2);
+    btTl.to(btnItem.querySelector(`.button.effect-button`), 1.8, {scale: 1, ease: Elastic.easeOut.config(1.2, 0.4)}, 1.2);
 
     btTl.timeScale(2.6);
 
@@ -207,7 +255,7 @@ export {fixHeader};
 import MicroModal from 'micromodal';
 import validate from '../vendor/validate.min';
 
-export const validateForm = function (form, config, closeModal= false) {
+export const validateForm = function (form, config, closeModal = false) {
   if (form) {
     form.addEventListener(`submit`, function (e) {
       e.preventDefault();
@@ -273,21 +321,25 @@ export const validateForm = function (form, config, closeModal= false) {
     }
 
     function showSuccess() {
-      const data = new FormData(form);
+      const formData = new FormData(form);
+      const searchParams = new URLSearchParams();
+
+      for (const pair of formData) {
+        searchParams.append(pair[0], pair[1]);
+      }
 
       fetch(form.getAttribute(`action`), {
         method: form.getAttribute(`method`),
-        body: data,
+        body: JSON.stringify(searchParams),
       })
-        .then(response => {
-          return response.text();
+        .then((response) => {
+          return response.json();
         })
-        .then(text => {
+        .then((response) => {
+          return console.log(response, 'run')
+        })
+        .then((text) => {
           form.reset();
-
-          if (closeModal) {
-            MicroModal.close(`modal-1`);
-          }
 
           MicroModal.show(`tnx-modal`);
 
@@ -333,7 +385,6 @@ const goToBtn = () => {
 
         item.addEventListener(`click`, function (e) {
           if (tabId === contentId) {
-            e.preventDefault();
             window.scroll({top: findPos(content) - 100, left: 0, behavior: `smooth`});
           }
         });
@@ -381,7 +432,7 @@ const goToBtn = () => {
   spyScrolling();
 
 
-  const scrollToBtn = document.querySelector(`.scroll-to-btn`);
+  const scrollToBtn = document.querySelector(`.scroll-up-btn`);
 
   scrollToBtn.addEventListener(`click`, () => {
     window.scroll({top: 0, left: 0, behavior: `smooth`});
@@ -389,9 +440,9 @@ const goToBtn = () => {
 
   window.addEventListener(`scroll`, () => {
     if (window.scrollY > 400) {
-      scrollToBtn.classList.add(`scroll-to-btn__visible`);
+      scrollToBtn.classList.add(`scroll-up-btn__visible`);
     } else {
-      scrollToBtn.classList.remove(`scroll-to-btn__visible`);
+      scrollToBtn.classList.remove(`scroll-up-btn__visible`);
     }
   });
 
@@ -400,32 +451,35 @@ const goToBtn = () => {
 
 export {goToBtn};
 
-import MicroModal from 'micromodal';
+const mobileMenu = () => {
+  const button = document.querySelector(`.mobile-button`);
+  const buttonInner = button.querySelector(`.mobile-button__inner`);
+  const menu = document.getElementById(`header-nav`);
+  const menuList = menu.querySelector(`.header__list-menu`);
+  const menuLink = menu.querySelector(`.header__item-link`);
+  const menuItem = menu.querySelector(`.header__item-menu`);
+
+  document.body.addEventListener(`click`, (e) => {
+    if (!menu.classList.contains(`header__nav--open`) && e.target === button || e.target === buttonInner) {
+      menu.classList.add(`header__nav--open`);
+    } else {
+      menu.classList.remove(`header__nav--open`);
+    }
+  });
+};
+
+export {mobileMenu};
 
 const modalYoutube = () => {
-  const btnModals = document.querySelectorAll(`.btn-modal-youtube`);
-
-  for (const el of btnModals) {
-    el.addEventListener(`click`, () => {
-      MicroModal.show(`${el.dataset.micromodalTrigger}`, {
-        onShow: modal => {
-          modal.querySelector('iframe').setAttribute('src', `${el.dataset.videoSrc}`);
-        },
-        onClose: modal => {
-          modal.querySelector('iframe').setAttribute('src', modal.querySelector('iframe').getAttribute('src'));
-        },
-      });
-    });
-  }
-
-  // MicroModal.init({
-  //   onShow: modal => {
-  //
-  //   },
-  //   onClose: modal => {
-  //     modal.querySelector('iframe').setAttribute('src', modal.querySelector('iframe').getAttribute('src'));
-  //   },
-  // });
+  $(`[data-fancybox]`).fancybox({
+    youtube: {
+      controls: 0,
+      showinfo: 0
+    },
+    vimeo: {
+      color: `f00`
+    }
+  });
 };
 
 export {modalYoutube};
@@ -434,75 +488,82 @@ const parallax = () => {
   const controller = new ScrollMagic.Controller();
 
   const banner = document.querySelector(`.main-banner`);
-  const courses = document.querySelector(`.courses`);
-  const why = document.querySelector(`.why-way`);
-  const planets = banner.querySelectorAll(`.animate-planet`);
-  const rocket = banner.querySelector(`.rocket`);
-  const asteroid = document.querySelector(`.asteroid`);
-  const comet = document.querySelector(`.comet`);
-  const tlBanner = new TimelineMax();
-  const tlCourses = new TimelineMax();
-  const tlWhy = new TimelineMax();
 
-  // tlBanner
-  //   .to(planets[0], 6, {
-  //     y: 100
-  //   })
-  //   .to(planets[1], 6, {
-  //     y: 150
-  //   }, '-=6')
-  //   .to(rocket, 6, {
-  //     y: -200
-  //   }, '-=6');
+  if (banner) {
+    const courses = document.querySelector(`.courses`);
+    const why = document.querySelector(`.why-way`);
+    const planets = banner.querySelectorAll(`.animate-planet`);
+    const rocket = banner.querySelector(`.rocket`);
+    const bannerStars = banner.querySelector(`.main-banner__parallax-star`);
+    const asteroid = document.querySelector(`.asteroid`);
+    const comet = document.querySelector(`.comet`);
+    const tlBanner = new TimelineMax();
+    const tlCourses = new TimelineMax();
+    const tlWhy = new TimelineMax();
 
-  tlCourses
-    .to(asteroid, 6, {
-      y: 100,
-      x: -100,
-    });
+    // tlBanner
+    //   .to(planets[0], 6, {
+    //     y: 100
+    //   })
+    //   .to(planets[1], 6, {
+    //     y: 150
+    //   }, '-=6')
+    //   .to(rocket, 6, {
+    //     y: -200
+    //   }, '-=6');
 
-  tlWhy
-    .to(comet, 6, {
-      y: 100,
-      x: -100,
-    });
+    tlCourses
+      .to(asteroid, 6, {
+        y: 100,
+        x: -100,
+      });
 
-  // let sceneBanner = new ScrollMagic.Scene({
-  //   triggerElement: banner,
-  //   duration: "200%",
-  //   triggerHook: 0
-  // })
-  //   .setTween(tlBanner)
-  //   .addTo(controller);
+    tlWhy
+      .to(comet, 6, {
+        y: 100,
+        x: -100,
+      });
 
-  let sceneCourse = new ScrollMagic.Scene({
-    triggerElement: planets[0],
-    duration: "200%",
-    triggerHook: 0
-  })
-    .setTween(tlCourses)
-    .addTo(controller);
+    // let sceneBanner = new ScrollMagic.Scene({
+    //   triggerElement: banner,
+    //   duration: "200%",
+    //   triggerHook: 0
+    // })
+    //   .setTween(tlBanner)
+    //   .addTo(controller);
 
-  let sceneWhy = new ScrollMagic.Scene({
-    triggerElement: why,
-    duration: "200%",
-    triggerHook: 0
-  })
-    .setTween(tlWhy)
-    .addTo(controller);
+    let sceneCourse = new ScrollMagic.Scene({
+      triggerElement: planets[0],
+      duration: "200%",
+      triggerHook: 0
+    })
+      .setTween(tlCourses)
+      .addTo(controller);
 
-  const parallaxPanets = function (e) {
-    let _w = window.innerWidth / 2;
-    let _h = window.innerHeight / 2;
-    let _mouseX = e.clientX;
-    let _mouseY = e.clientY;
+    let sceneWhy = new ScrollMagic.Scene({
+      triggerElement: why,
+      duration: "200%",
+      triggerHook: 0
+    })
+      .setTween(tlWhy)
+      .addTo(controller);
 
-    TweenLite.to(rocket, 1, {transform: `translate(-${(_mouseX - _w) * 0.015}%, -${(_mouseY - _h) * 0.025}%)`, ease:Power2.easeOut});
-    TweenLite.to(planets[0], 1, {transform: `translate(${(_mouseX - _w) * 0.015}%, -${(_mouseY - _h) * 0.025}%)`, ease:Power2.easeOut});
-    TweenLite.to(planets[1], 1, {transform: `translateY(${(_mouseY - _h) * 0.01}%)`, ease:Power2.easeOut});
-  };
+    const parallaxPanets = function (e) {
+      let _w = window.innerWidth / 2;
+      let _h = window.innerHeight / 2;
+      let _mouseX = e.clientX;
+      let _mouseY = e.clientY;
 
-  window.addEventListener("mousemove", parallaxPanets);
+      TweenLite.to(rocket, 1, {transform: `translate(-${(_mouseX - _w) * 0.015}%, -${(_mouseY - _h) * 0.025}%)`, ease:Power2.easeOut});
+      TweenLite.to(planets[0], 1, {transform: `translate(${(_mouseX - _w) * 0.015}%, -${(_mouseY - _h) * 0.025}%)`, ease:Power2.easeOut});
+      TweenLite.to(planets[1], 1, {transform: `translateY(${(_mouseY - _h) * 0.01}%)`, ease:Power2.easeOut});
+      TweenLite.to(bannerStars, 1, {transform: `translateX(${(_mouseX - _w) * 0.003}%)`, ease:Power2.easeOut});
+    };
+
+    if (window.innerWidth > 1024) {
+      window.addEventListener(`mousemove`, parallaxPanets);
+    }
+  }
 
 };
 
