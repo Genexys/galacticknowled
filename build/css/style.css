@@ -1897,11 +1897,22 @@ input[type="radio"].visually-hidden {
       @media screen and (max-width: 1100px) {
         .main-banner__big-planet .big-planet {
           right: -55%; } }
+      @media screen and (max-width: 900px) {
+        .main-banner__big-planet .big-planet {
+          right: -75%; } }
     .main-banner__big-planet .big-planet-light {
       position: absolute;
       z-index: 1;
       top: 30px;
       right: 150px; }
+      @media screen and (max-width: 1100px) {
+        .main-banner__big-planet .big-planet-light {
+          top: 70px;
+          right: -55%; } }
+      @media screen and (max-width: 900px) {
+        .main-banner__big-planet .big-planet-light {
+          top: 90px;
+          right: -75%; } }
 
 .courses {
   position: relative;
