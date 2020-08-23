@@ -48,6 +48,15 @@
     }
 
     &--single {
+      .courses__item {
+        &:nth-of-type(2) {
+
+          .course-card__wrapper {
+            box-shadow: 0 0 11px 0 rgba(46, 224, 205, 03);
+            border: 1px solid rgb(100, 251, 253);
+          }
+        }
+      }
 
       .course-card--one {
         .course-card__wrapper,
@@ -94,18 +103,6 @@
           height: 300px;
           margin-bottom: 23px;
         }
-
-        &:hover {
-          .course-card__wrapper {
-            box-shadow: 0 0 11px 0 rgba(46, 224, 205, 03);
-            border-color: rgb(100, 251, 253);
-          }
-        }
-      }
-
-      .course-card__wrapper {
-        border: 1px solid transparent;
-        transition: transform 0.3s, border-color .5s, box-shadow 0.5s;
       }
 
       .course-card__title {
