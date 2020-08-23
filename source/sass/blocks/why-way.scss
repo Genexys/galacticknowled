@@ -93,6 +93,7 @@
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(1, 1fr);
+    align-items: center;
     margin: 0;
     padding-top: 30px;
   }
@@ -100,6 +101,7 @@
   &__img {
     display: block;
     margin: 0 auto;
+    padding: 0 5px;
   }
 
   &__descr {
@@ -113,6 +115,12 @@
     font-size: 15px;
     line-height: 18px;
     text-align: center;
+
+    @media screen and (max-width: 400px) {
+      padding-right: 0;
+      padding-left: 0;
+      font-size: 13px;
+    }
 
     &::before,
     &::after {
@@ -137,6 +145,10 @@
       width: 100%;
       margin: 0;
       text-align: center;
+
+      @media screen and (max-width: 400px) {
+        max-width: none;
+      }
     }
   }
 }
