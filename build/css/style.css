@@ -2410,7 +2410,7 @@ input[type="radio"].visually-hidden {
     height: 100%;
     background-image: url("../img/bg/star-three-screen.png");
     background-repeat: no-repeat;
-    background-position: 0 -255px;
+    background-position: 0 -3%;
     background-size: auto; }
   .why-way__title {
     position: relative;
@@ -2714,8 +2714,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   padding-top: 32px;
   padding-bottom: 75px;
-  background-image: url("../img/bg/star-five-screen.png");
-  background-position: 50% -78px; }
+  background-image: url("../img/bg/star-five-screen.png"); }
   @media screen and (max-width: 650px) {
     .form-block {
       padding-bottom: 35px; } }
