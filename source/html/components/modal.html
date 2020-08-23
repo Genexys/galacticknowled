@@ -1,3 +1,41 @@
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1">
+      <div class="modal__content" id="modal-1-content">
+
+        <h2 class="offer__title">Fill the Form Below</h2>
+        <p class="offer__descr">Our manager will contact you to discuss the details</p>
+
+        <form action="./form.php" method="post" class="offer__form modal-form">
+          <div class="input-wrapper">
+            <svg class="input-wrapper__icon" width="16" height="16">
+              <use xlink:href="#icon-user"></use>
+            </svg>
+            <input id="popup-name" name="name" type="text">
+            <label for="popup-name">Vor-und Nachname</label>
+          </div>
+          <div class="input-wrapper">
+            <svg class="input-wrapper__icon" width="22" height="15">
+              <use xlink:href="#icon-email"></use>
+            </svg>
+            <input id="popup-email" name="email" type="email">
+            <label for="popup-email">Mail</label>
+          </div>
+          <div class="offer__form-privacy">
+            <p>Ich stimme der Speicherung und Bearbeitung meiner Daten zur Erledigung dieser
+              Anfrage zu. Es gilt die <a href="" target="_blank">Datenschutzerklärung</a>.</p>
+          </div>
+          <button class="main-btn" type="submit">
+          <span>
+            Jetzt anfragen
+          </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal micromodal-slide thnx-modal" id="tnx-modal" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="tnx-modal">

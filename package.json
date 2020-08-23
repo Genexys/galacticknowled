@@ -56,8 +56,10 @@
   },
   "dependencies": {
     "del": "^5.1.0",
+    "fancybox": "^3.0.1",
     "gulp-cheerio": "^1.0.0",
     "inputmask": "^5.0.5",
+    "jquery": "^3.5.1",
     "micromodal": "^0.4.6",
     "smoothscroll-polyfill": "^0.4.4",
     "van11y-accessible-accordion-aria": "^3.0.1",

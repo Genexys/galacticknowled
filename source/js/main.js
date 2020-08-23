@@ -13,23 +13,28 @@ import {modalYoutube} from "./modules/modalYoutube";
 import {mobileMenu} from "./modules/mobileMenu";
 import {accordion} from "./modules/accordion";
 
-// Utils
+document.addEventListener(`DOMContentLoaded`, ()=> {
+  // Utils
 // ---------------------------------
 // kick off the polyfill!
-smoothscroll.polyfill();
-forEachPolyfill();
-initIe11Download();
+  smoothscroll.polyfill();
+  forEachPolyfill();
+  initIe11Download();
 
 
 // Modules
 // ---------------------------------
-fixHeader();
-animateBtn();
-parallax();
-phoneMask();
-validateMainForm();
-reviews();
-goToBtn();
-modalYoutube();
-mobileMenu();
-accordion();
+
+  fixHeader();
+  animateBtn();
+  parallax();
+  phoneMask();
+  validateMainForm();
+  reviews();
+  goToBtn();
+  modalYoutube();
+  mobileMenu();
+  accordion();
+
+
+});

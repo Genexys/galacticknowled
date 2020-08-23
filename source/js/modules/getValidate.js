@@ -1,7 +1,7 @@
 import MicroModal from 'micromodal';
 import validate from '../vendor/validate.min';
 
-export const validateForm = function (form, config, closeModal= false) {
+export const validateForm = function (form, config, closeModal = false) {
   if (form) {
     form.addEventListener(`submit`, function (e) {
       e.preventDefault();
@@ -78,10 +78,6 @@ export const validateForm = function (form, config, closeModal= false) {
         })
         .then(text => {
           form.reset();
-
-          if (closeModal) {
-            MicroModal.close(`modal-1`);
-          }
 
           MicroModal.show(`tnx-modal`);
 
