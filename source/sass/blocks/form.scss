@@ -32,6 +32,36 @@
     .form-block__wrapper {
       z-index: 2;
     }
+
+    .form-block__title {
+      margin-bottom: 0;
+
+      @media screen and (max-width: 1023px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .form-block__sub-title {
+      margin: 0 0 10px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .form-block__title-desc {
+      display: block;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    .form-block__title-mobile {
+      display: none;
+
+      @media screen and (max-width: 1023px) {
+        display: block;
+      }
+    }
   }
 
   &__wrapper {

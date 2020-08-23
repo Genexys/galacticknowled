@@ -2763,6 +2763,25 @@ input[type="radio"].visually-hidden {
         display: block; } }
   .form-block--course .form-block__wrapper {
     z-index: 2; }
+  .form-block--course .form-block__title {
+    margin-bottom: 0; }
+    @media screen and (max-width: 1023px) {
+      .form-block--course .form-block__title {
+        margin-bottom: 30px; } }
+  .form-block--course .form-block__sub-title {
+    margin: 0 0 10px;
+    font-size: 12px;
+    text-align: center; }
+  .form-block--course .form-block__title-desc {
+    display: block; }
+    @media screen and (max-width: 1023px) {
+      .form-block--course .form-block__title-desc {
+        display: none; } }
+  .form-block--course .form-block__title-mobile {
+    display: none; }
+    @media screen and (max-width: 1023px) {
+      .form-block--course .form-block__title-mobile {
+        display: block; } }
   .form-block__wrapper {
     position: relative;
     border-radius: 20px;
