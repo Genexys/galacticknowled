@@ -78,6 +78,7 @@ const parallax = () => {
       window.addEventListener(`mousemove`, parallaxPanets);
     }
   }
+
 };
 
 export {parallax};
