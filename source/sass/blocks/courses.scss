@@ -280,8 +280,13 @@
       right: 0;
       left: 0;
       bottom: 0;
+      border-radius: 31px;
       background-position: 100%;
       background-repeat: no-repeat;
+
+      @media screen and (max-width: 650px) {
+        border-radius: 18px;
+      }
     }
 
     &:hover {

@@ -2159,8 +2159,12 @@ input[type="radio"].visually-hidden {
       right: 0;
       left: 0;
       bottom: 0;
+      border-radius: 31px;
       background-position: 100%;
       background-repeat: no-repeat; }
+      @media screen and (max-width: 650px) {
+        .course-card__wrapper::before {
+          border-radius: 18px; } }
     .course-card__wrapper:hover {
       -webkit-transform: translateY(-10px);
               transform: translateY(-10px); }
