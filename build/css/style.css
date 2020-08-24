@@ -2795,6 +2795,8 @@ input[type="radio"].visually-hidden {
     @media screen and (max-width: 1023px) {
       .form-block--course .form-block__title-mobile {
         display: block; } }
+  .form-block--course .orange-planet {
+    top: -600px !important; }
   .form-block__wrapper {
     position: relative;
     border-radius: 20px;
@@ -3530,6 +3532,9 @@ input[type="radio"].visually-hidden {
   z-index: 1;
   padding-top: 118px;
   padding-bottom: 196px; }
+  @media screen and (max-width: 767px) {
+    .footer {
+      padding-top: 50px; } }
   .footer::before {
     content: "";
     position: absolute;

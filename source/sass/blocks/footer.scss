@@ -4,6 +4,10 @@
   padding-top: 118px;
   padding-bottom: 196px;
 
+  @media screen and (max-width: 767px) {
+    padding-top: 50px;
+  }
+
   &::before {
     content: "";
     position: absolute;
