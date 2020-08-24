@@ -2407,7 +2407,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 30px; }
   @media screen and (max-width: 600px) {
     .why-way {
-      margin-top: -100px; } }
+      margin-top: -80px; } }
   .why-way::after {
     content: "";
     position: absolute;
