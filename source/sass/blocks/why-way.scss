@@ -19,6 +19,11 @@
     background-repeat: no-repeat;
     background-position: 0 160px;
     background-size: contain;
+
+    @media screen and (max-width: 650px) {
+      left: -130px;
+      width: 1000px;
+    }
   }
 
   &::before {
