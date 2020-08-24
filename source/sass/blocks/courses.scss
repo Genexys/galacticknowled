@@ -18,14 +18,16 @@
   &__title {
     position: relative;
     z-index: 2;
-    margin: 0 0 55px;
+    margin: 0 0 50px;
     font-size: 30px;
+    line-height: 45px;
 
     @media screen and (max-width: 650px) {
       max-width: 283px;
       width: 100%;
       margin: 0 auto 30px;
       font-size: 26px;
+      line-height: 30px;
       text-align: center;
     }
   }
@@ -44,7 +46,7 @@
 
     @media screen and (max-width: 650px) {
       --column-count-course: 1;
-      grid-gap: 25px 30px;
+      grid-gap: 50px 30px;
     }
 
     &--single {
@@ -98,7 +100,6 @@
       }
 
       .course-card {
-
         @media screen and (max-width: 650px) {
           height: 300px;
           margin-bottom: 23px;
@@ -298,6 +299,10 @@
     height: 100%;
     border-radius: 31px;
     opacity: 0.3;
+
+    @media screen and (max-width: 650px) {
+      border-radius: 18px;
+    }
 
     &:nth-of-type(3) {
       opacity: 0.15;
