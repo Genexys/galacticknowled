@@ -26,13 +26,17 @@ const goToBtn = () => {
   const spyScrolling = () => {
     const sections = document.querySelectorAll(`section.data-content`);
     const menuLinks = document.querySelectorAll(`a.btn-action`);
-
     const makeActive = (link) => {
       const activeLink = Array.from(menuLinks).filter((el) => el.dataset.btnScroll === link);
-      activeLink[0].classList.add(`header__item-link--active`)
+
+      if (activeLink[0]) {
+        activeLink[0].classList.add(`header__item-link--active`)
+      }
     };
     const removeActive = (link) => {
-      menuLinks[link].classList.remove(`header__item-link--active`)
+      if (menuLinks[link]) {
+        menuLinks[link].classList.remove(`header__item-link--active`)
+      }
     };
     const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
     const sectionMargin = 200;
