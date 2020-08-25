@@ -7,7 +7,7 @@
     padding-top: 170px;
   }
 
-  &__gradient {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -15,7 +15,7 @@
     left: 0;
     bottom: 0;
     z-index: 0;
-    background: radial-gradient(circle at 50%, #7c3b67 5%, rgba(255, 255, 255, 0) 68%);
+    background: radial-gradient(farthest-corner at 50% 50%, #7c3b67 -5%, rgba(255, 255, 255, 0) 68%);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     //opacity: 0.2;
