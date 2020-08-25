@@ -329,10 +329,10 @@
 
     &:focus {
       border-color: rgba(220, 190, 255, 0.2);
-      background-color: rgba(45, 7, 75, 33%);
+      background-color: rgba(255, 255, 255, 0.2);
 
       //opacity: 0.2;
-      box-shadow: 0 0 21.84px 2.16px rgba(0, 0, 0, 0.004), inset 0 0 6.7px 3.3px rgba(6, 1, 10, 0.48);
+      box-shadow: 0 0 21.84px 2.16px rgba(0, 0, 0, 0.004), inset 0 0 6.7px 3.3px rgba(45, 7, 75, 0.33);
     }
   }
 
