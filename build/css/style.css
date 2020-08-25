@@ -1724,7 +1724,7 @@ input[type="radio"].visually-hidden {
   @media screen and (max-width: 650px) {
     .main-banner {
       padding-top: 170px; } }
-  .main-banner::before {
+  .main-banner__gradient {
     content: "";
     position: absolute;
     top: 0;
