@@ -1341,7 +1341,10 @@ input[type="radio"].visually-hidden {
     color: #ec1c24;
     opacity: 0;
     -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s; }
+    transition: opacity 0.3s;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased; }
   .input-wrapper--error input {
     border-color: #ec1c24 !important; }
   .input-wrapper--error .input-wrapper__error-text {
@@ -2781,7 +2784,7 @@ input[type="radio"].visually-hidden {
       .form-block--course .form-block__title {
         margin-bottom: 30px; } }
   .form-block--course .form-block__sub-title {
-    margin: 0 0 10px;
+    margin: 0 0 25px;
     font-size: 12px;
     text-align: center; }
   .form-block--course .form-block__title-desc {
