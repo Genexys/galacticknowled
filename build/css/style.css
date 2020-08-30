@@ -3542,7 +3542,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 196px; }
   @media screen and (max-width: 767px) {
     .footer {
-      padding-top: 50px; } }
+      padding: 50px 0; } }
   .footer::before {
     content: "";
     position: absolute;
@@ -3627,7 +3627,10 @@ input[type="radio"].visually-hidden {
           .footer__cell:nth-of-type(1)::after {
             display: block; } }
       .footer__cell:nth-of-type(1) .footer__descr {
-        margin-bottom: 9px; }
+        margin-bottom: 19px; }
+        @media screen and (max-width: 960px) {
+          .footer__cell:nth-of-type(1) .footer__descr {
+            margin-bottom: 9px; } }
     .footer__cell:nth-of-type(2) {
       padding-left: 85px; }
       @media screen and (max-width: 960px) {
@@ -3782,7 +3785,13 @@ input[type="radio"].visually-hidden {
   left: 0;
   bottom: 0;
   z-index: 1;
+  width: 100%;
   pointer-events: none; }
+  @media screen and (max-width: 370px) {
+    .footer-bg {
+      left: -103px;
+      width: 461px;
+      max-width: none; } }
 
 .thnx-modal .modal__container {
   padding: 30px 40px;
