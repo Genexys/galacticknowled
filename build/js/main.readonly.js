@@ -233,19 +233,35 @@ const fixHeader = () => {
   const header = document.querySelector(`.header`);
   let bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-  if (bodyScrollTop >= 100) {
-    header.classList.add(`header--fix`);
+  if (window.innerWidth >= 1024) {
+    if (bodyScrollTop >= 100) {
+      header.classList.add(`header--fix`);
+    } else {
+      header.classList.remove(`header--fix`);
+    }
   } else {
-    header.classList.remove(`header--fix`);
+    if (bodyScrollTop >= 20) {
+      header.classList.add(`header--fix`);
+    } else {
+      header.classList.remove(`header--fix`);
+    }
   }
 
   window.addEventListener(`scroll`, () => {
     bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-    if (bodyScrollTop >= 100) {
-      header.classList.add(`header--fix`);
+    if (window.innerWidth >= 1024) {
+      if (bodyScrollTop >= 100) {
+        header.classList.add(`header--fix`);
+      } else {
+        header.classList.remove(`header--fix`);
+      }
     } else {
-      header.classList.remove(`header--fix`);
+      if (bodyScrollTop >= 20) {
+        header.classList.add(`header--fix`);
+      } else {
+        header.classList.remove(`header--fix`);
+      }
     }
   });
 };
@@ -330,15 +346,15 @@ export const validateForm = function (form, config, closeModal = false) {
 
       fetch(form.getAttribute(`action`), {
         method: form.getAttribute(`method`),
-        body: JSON.stringify(searchParams),
+        body: searchParams,
       })
         .then((response) => {
-          return response.json();
+          return response.text();
         })
         .then((response) => {
-          return console.log(response, 'run')
+          return response;
         })
-        .then((text) => {
+        .then(() => {
           form.reset();
 
           MicroModal.show(`tnx-modal`);
@@ -397,13 +413,17 @@ const goToBtn = () => {
   const spyScrolling = () => {
     const sections = document.querySelectorAll(`section.data-content`);
     const menuLinks = document.querySelectorAll(`a.btn-action`);
-
     const makeActive = (link) => {
       const activeLink = Array.from(menuLinks).filter((el) => el.dataset.btnScroll === link);
-      activeLink[0].classList.add(`header__item-link--active`)
+
+      if (activeLink[0]) {
+        activeLink[0].classList.add(`header__item-link--active`)
+      }
     };
     const removeActive = (link) => {
-      menuLinks[link].classList.remove(`header__item-link--active`)
+      if (menuLinks[link]) {
+        menuLinks[link].classList.remove(`header__item-link--active`)
+      }
     };
     const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
     const sectionMargin = 200;
