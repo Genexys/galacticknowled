@@ -3462,9 +3462,6 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0 0 20px;
   padding-left: 13px; }
   @media screen and (max-width: 900px) {
@@ -3780,6 +3777,7 @@ input[type="radio"].visually-hidden {
       .link-phone::after {
         width: 24px; } }
 
+.what-learn
 .footer-bg {
   position: absolute;
   left: 0;
@@ -3788,7 +3786,8 @@ input[type="radio"].visually-hidden {
   width: 100%;
   pointer-events: none; }
   @media screen and (max-width: 370px) {
-    .footer-bg {
+    .what-learn
+.footer-bg {
       left: -103px;
       width: 461px;
       max-width: none; } }
