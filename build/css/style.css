@@ -3777,7 +3777,6 @@ input[type="radio"].visually-hidden {
       .link-phone::after {
         width: 24px; } }
 
-.what-learn
 .footer-bg {
   position: absolute;
   left: 0;
@@ -3786,8 +3785,7 @@ input[type="radio"].visually-hidden {
   width: 100%;
   pointer-events: none; }
   @media screen and (max-width: 370px) {
-    .what-learn
-.footer-bg {
+    .footer-bg {
       left: -103px;
       width: 461px;
       max-width: none; } }
