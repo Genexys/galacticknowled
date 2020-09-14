@@ -260,6 +260,48 @@
     }
   }
 
+  &--four {
+    .course-card__wrapper {
+      background-image: linear-gradient( 122deg, rgb(64,103,202) 0%, rgb(40,179,204) 18%, rgb(16,117,210) 49%, rgb(59,177,198) 100%);
+
+      &::before {
+        background-image: url('../img/content/planet-course-4.png');
+      }
+    }
+
+    .course-card__shadow {
+      background-image: linear-gradient( 122deg, rgb(64,103,202) 0%, rgb(40,179,204) 18%, rgb(16,117,210) 49%, rgb(59,177,198) 100%);
+    }
+  }
+
+  &--five {
+    .course-card__wrapper {
+      background-image: linear-gradient( 122deg, rgb(0,255,228) 7%, rgb(47,175,170) 33%, rgb(30,169,199) 69%, rgb(8,91,176) 100%);
+
+      &::before {
+        background-image: url('../img/content/planet-course-5.png');
+      }
+    }
+
+    .course-card__shadow {
+      background-image: linear-gradient( 122deg, rgb(0,255,228) 7%, rgb(47,175,170) 33%, rgb(30,169,199) 69%, rgb(8,91,176) 100%);
+    }
+  }
+
+  &--six {
+    .course-card__wrapper {
+      background-image: linear-gradient( 122deg, rgb(135,191,255) 0%, rgb(74,144,210) 28%, rgb(153,222,197) 63%, rgb(24,158,90) 100%);
+
+      &::before {
+        background-image: url('../img/content/planet-course-6.png');
+      }
+    }
+
+    .course-card__shadow {
+      background-image: linear-gradient( 122deg, rgb(135,191,255) 0%, rgb(74,144,210) 28%, rgb(153,222,197) 63%, rgb(24,158,90) 100%);
+    }
+  }
+
   &__wrapper {
     width: 100%;
     height: 100%;

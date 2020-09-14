@@ -2141,6 +2141,24 @@ input[type="radio"].visually-hidden {
       background-image: url("../img/content/planet-course-3.png"); }
   .course-card--three .course-card__shadow {
     background-image: linear-gradient(122deg, #48c4c5 0%, #5ab5f0 18%, #7495f5 49%, #a662e4 77%, #b55ebe 100%); }
+  .course-card--four .course-card__wrapper {
+    background-image: linear-gradient(122deg, #4067ca 0%, #28b3cc 18%, #1075d2 49%, #3bb1c6 100%); }
+    .course-card--four .course-card__wrapper::before {
+      background-image: url("../img/content/planet-course-4.png"); }
+  .course-card--four .course-card__shadow {
+    background-image: linear-gradient(122deg, #4067ca 0%, #28b3cc 18%, #1075d2 49%, #3bb1c6 100%); }
+  .course-card--five .course-card__wrapper {
+    background-image: linear-gradient(122deg, #00ffe4 7%, #2fafaa 33%, #1ea9c7 69%, #085bb0 100%); }
+    .course-card--five .course-card__wrapper::before {
+      background-image: url("../img/content/planet-course-5.png"); }
+  .course-card--five .course-card__shadow {
+    background-image: linear-gradient(122deg, #00ffe4 7%, #2fafaa 33%, #1ea9c7 69%, #085bb0 100%); }
+  .course-card--six .course-card__wrapper {
+    background-image: linear-gradient(122deg, #87bfff 0%, #4a90d2 28%, #99dec5 63%, #189e5a 100%); }
+    .course-card--six .course-card__wrapper::before {
+      background-image: url("../img/content/planet-course-6.png"); }
+  .course-card--six .course-card__shadow {
+    background-image: linear-gradient(122deg, #87bfff 0%, #4a90d2 28%, #99dec5 63%, #189e5a 100%); }
   .course-card__wrapper {
     width: 100%;
     height: 100%;
